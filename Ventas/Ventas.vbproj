@@ -123,6 +123,7 @@
     <Content Include="Login.aspx" />
     <Content Include="PagM\Categoriasin.aspx" />
     <Content Include="PagM\Clientesbus.aspx" />
+    <Content Include="PagM\Clienteselim.aspx" />
     <Content Include="PagM\Clientesin.aspx" />
     <Content Include="PagM\MenuClientes.aspx" />
     <Content Include="PagM\Menu.aspx" />
@@ -257,13 +258,6 @@
       <DependentUpon>Clientesbus.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="PagM\Clientesin.aspx.designer.vb">
-      <DependentUpon>Clientesin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PagM\Clientesin.aspx.vb">
-      <DependentUpon>Clientesin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -282,6 +276,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PagM\Clienteselim.aspx.designer.vb">
+      <DependentUpon>Clienteselim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Clienteselim.aspx.vb">
+      <DependentUpon>Clienteselim.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\Clientesin.aspx.designer.vb">
+      <DependentUpon>Clientesin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Clientesin.aspx.vb">
+      <DependentUpon>Clientesin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PagM\MenuClientes.aspx.designer.vb">
       <DependentUpon>MenuClientes.aspx</DependentUpon>

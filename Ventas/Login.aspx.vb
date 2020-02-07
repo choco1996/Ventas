@@ -43,38 +43,6 @@ Public Class Login
 
         End If
     End Sub
-    Private Sub consulta()
-        Dim usuario, clave, a, b As String
-        Dim ac, t As Int16
-        usuario = txtUsuario.Text
-        clave = txtclave.Text
-
-        Try
-            Dim query As String = "SELECT idusuario, contraseña, activo, idtipousuario FROM usuarios where idusuario = '" & usuario & "'"
-            Conexion.Conectado()
-
-            Dim rs As SqlDataReader = Conexion.ExecuteQuery(query)
-            Do While rs.NextResult()
-                a = rs.GetString(1)
-                b = rs.GetString(2)
-                ac = rs.GetInt16(3)
-                t = rs.GetInt16(4)
-            Loop
-
-            If a Is Nothing AndAlso b Is Nothing Then
-                MsgBox("usuario no existe")
-                Return
-            End If
-            If b.Equals(value:=clave) Then
-                Response.Redirect("PagM/Menu.aspx")
-            End If
-
-        Catch sqlEx As SqlException
-            MsgBox(sqlEx.Message, MsgBoxStyle.Information)
-        End Try
-
-    End Sub
-
     Protected Sub Btnlogin_Click(sender As Object, e As EventArgs) Handles Btnlogin.Click
         consulta2()
         ''Response.Redirect("PagM/Clientes.aspx")

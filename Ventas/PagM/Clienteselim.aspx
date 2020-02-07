@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="Clientesbus.aspx.vb" Inherits="Ventas.Clientesbus" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="Clienteselim.aspx.vb" Inherits="Ventas.Clienteselim" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Busqueda de Clientes</title>
+    <title>Eliminacion de Clientes</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="jumbotron row justify-content-center">
-     <h1 class="display-4 text-center">Formulario Clientes</h1>
+         <div class="jumbotron row justify-content-center">
+     <h1 class="display-4 text-center">Eliminacion de Clientes</h1>
  </div>
 <br />
    
@@ -61,5 +61,4 @@
 <div class="col-md-1"></div> <!--pading-->
     </div>      
 </div>
-
 </asp:Content>

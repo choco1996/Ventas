@@ -38,7 +38,7 @@
             </div>
        </form>
       </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=DESKTOP-OVIL7IO\SQLEXPRESS;Initial Catalog=Ventas;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [idusuario], [contraseña], [activo], [idtipousuario] FROM [usuarios] WHERE ([idusuario] = @idusuario)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" SelectCommand="SELECT [idusuario], [contraseña], [activo], [idtipousuario] FROM [usuarios] WHERE ([idusuario] = @idusuario)">
         <SelectParameters>
             <asp:ControlParameter ControlID="txtUsuario" Name="idusuario" PropertyName="Text" Type="String" />
         </SelectParameters>

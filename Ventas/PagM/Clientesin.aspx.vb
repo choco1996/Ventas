@@ -17,7 +17,7 @@ Public Class Clientes
         telefono = txttelefono.Text
         correo = txtcorreo.Text
         Try
-            Dim insertquery As String = "INSERT INTO clientes(idclientes, nombre, apellido, rtn, direccion, telefono, correo)VALUES('" & identidad & "', '" & nombre & "', '" & txtapellido.Text & "', '" & rtn & "', '" & direccion & "', '" & telefono & "', '" & correo & "')"
+            Dim insertquery As String = "INSERT INTO clientes(idclientes, nombre, apellido, rtn, direccion, telefono, correo)VALUES('" & identidad & "', '" & nombre & "', '" & apellido & "', '" & rtn & "', '" & direccion & "', '" & telefono & "', '" & correo & "')"
             Conexion.Conectado()
             Conexion.ExecuteQuery(insertquery)
         Catch sqlEx As SqlException
@@ -33,10 +33,8 @@ Public Class Clientes
         txtcorreo.Text = ""
     End Sub
 
-
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
         insert()
-
     End Sub
 
 End Class

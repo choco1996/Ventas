@@ -31,8 +31,7 @@
              <asp:TextBox ID="txtcorreo" runat="server" CssClass="form-control"/>
         <div class="text-center">
              <asp:Button Text="Guardar" ID="btnguardar" runat="server"  CssClass="btn btn-primary"/>
-             <asp:Button Text="Secundario" ID="Button1" runat="server"  CssClass="btn btn-primary"/>
-         </div>
+        </div>
         </div>
         
  <div class="col-md-3"></div><!--pading-->

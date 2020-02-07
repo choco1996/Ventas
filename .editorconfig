@@ -2,3 +2,6 @@
 
 # CA1031: No capture tipos de excepción generales.
 dotnet_diagnostic.CA1031.severity = none
+
+# CA1707: Los identificadores no deben contener caracteres de subrayado
+dotnet_diagnostic.CA1707.severity = none
