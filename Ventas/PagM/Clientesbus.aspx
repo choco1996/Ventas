@@ -4,13 +4,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="jumbotron row justify-content-center">
-     <h1 class="display-4 text-center">Formulario Clientes</h1>
+     <h1 class="display-4 text-center">Busqueda de Clientes</h1>
  </div>
 <br />
    
  <div class="container-sm"> <!-- Formulario -->
         <h3>Busqueda de Datos</h3>
      <hr />
+   </div>
      <div class="row"> <!-- Formulario centrado --> 
 <div class="col-md-1"></div> <!--pading-->
      <div class="col-md-10 align-items-md-center">

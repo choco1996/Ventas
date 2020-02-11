@@ -8,7 +8,7 @@ Public Class Login
     End Sub
     Private Sub consulta2()
         Dim datos As New GridView
-        Dim a, b, c, d As String
+
         datos.DataSource = Me.SqlDataSource1
         datos.DataBind()
         If datos.Rows.Count > 0 Then
@@ -45,7 +45,6 @@ Public Class Login
     End Sub
     Protected Sub Btnlogin_Click(sender As Object, e As EventArgs) Handles Btnlogin.Click
         consulta2()
-        ''Response.Redirect("PagM/Clientes.aspx")
     End Sub
 
 End Class

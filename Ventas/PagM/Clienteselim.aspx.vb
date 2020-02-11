@@ -11,9 +11,12 @@
                 GridView1.DataSourceID = ("SqlDataSource3")
             Case 2
                 GridView1.DataSourceID = ("SqlDataSource1")
-            Case Else
-                GridView1.DataSourceID = ("SqlDataSource2")
         End Select
 
     End Sub
+
+    Protected Sub eliminar(sender As Object, e As EventArgs) Handles btneliminar.Click
+        SqlDataSource4.Delete()
+    End Sub
+
 End Class

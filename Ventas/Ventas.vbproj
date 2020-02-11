@@ -120,11 +120,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\estiloslogin.css" />
     <Content Include="Content\css\navbar.css" />
+    <Content Include="Scripts\mascara.js" />
     <Content Include="Login.aspx" />
     <Content Include="PagM\Categoriasin.aspx" />
     <Content Include="PagM\Clientesbus.aspx" />
     <Content Include="PagM\Clienteselim.aspx" />
     <Content Include="PagM\Clientesin.aspx" />
+    <Content Include="PagM\Clientesmod.aspx" />
     <Content Include="PagM\MenuClientes.aspx" />
     <Content Include="PagM\Menu.aspx" />
     <Content Include="PagM\Productoin.aspx" />
@@ -290,6 +292,13 @@
     <Compile Include="PagM\Clientesin.aspx.vb">
       <DependentUpon>Clientesin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagM\Clientesmod.aspx.designer.vb">
+      <DependentUpon>Clientesmod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Clientesmod.aspx.vb">
+      <DependentUpon>Clientesmod.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagM\MenuClientes.aspx.designer.vb">
       <DependentUpon>MenuClientes.aspx</DependentUpon>

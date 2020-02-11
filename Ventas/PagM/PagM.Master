@@ -93,5 +93,10 @@
 <!-- Footer -->
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $("#tuTextBoxId").mask("999,999,999.99");
+        })
+</script>
 </body>
 </html>

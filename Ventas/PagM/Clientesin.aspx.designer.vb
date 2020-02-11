@@ -50,15 +50,6 @@ Partial Public Class Clientes
     Protected WithEvents txtrtn As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtdireccion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtdireccion As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Control txttelefono.
     '''</summary>
     '''<remarks>
@@ -77,6 +68,15 @@ Partial Public Class Clientes
     Protected WithEvents txtcorreo As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''Control txtdireccion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtdireccion As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control btnguardar.
     '''</summary>
     '''<remarks>
@@ -84,4 +84,13 @@ Partial Public Class Clientes
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnguardar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
