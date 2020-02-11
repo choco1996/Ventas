@@ -10,7 +10,7 @@
         <br />
  <Div class="col-md-12">
     <div class="input-group-lg text-center">
-      <a class="btn btn-primary btn-lg" href="Clientesin.aspx" role="button">Insercion</a>
+      <a class="btn btn-primary btn-lg" href="Clientesin.aspx" role="button">Inserción</a>
       <a class="btn btn-primary btn-lg" href="Clientesbus.aspx" role="button">Busqueda</a>
       <a class="btn btn-primary btn-lg" href="Clientesmod.aspx" role="button">Modificar</a>
       <a class="btn btn-primary btn-lg" href="Clienteselim.aspx" role="button">Eliminar</a>

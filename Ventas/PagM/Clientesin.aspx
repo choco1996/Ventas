@@ -9,7 +9,7 @@
 <br />
    
  <div class="container-sm"> <!-- Formulario -->
-        <h3>Insercion de Datos</h3>
+        <h3>Inserción de Datos</h3>
      <hr />
    </div>
 
