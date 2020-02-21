@@ -53,7 +53,7 @@
          </div>
           
           <div class="text-center">
-                 <asp:Button Text="Guardar" ID="btnguardar" runat="server"  CssClass="btn btn-primary"/>
+                 <asp:Button Text="Guardar" ID="btnguardar" runat="server"  CssClass="btn btn-lg btn-primary"/>
                  </div>
 </div>
 <div class="col-md-3">
@@ -80,5 +80,5 @@
     </asp:SqlDataSource>
          </div> <!--pading-->
     </div>      
-    <
+    
 </asp:Content>

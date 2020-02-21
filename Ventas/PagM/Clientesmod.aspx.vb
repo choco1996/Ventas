@@ -32,6 +32,8 @@
 
     Protected Sub btneditar_Click(sender As Object, e As EventArgs) Handles btneditar.Click
         SqlDataSource3.Update()
+        Dim limpiar As New Limpiar
+        limpiar.CleanControls(Me.Controls)
     End Sub
 
     Protected Sub btnselecion_Click(sender As Object, e As EventArgs) Handles btnselecion.Click

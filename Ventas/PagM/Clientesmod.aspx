@@ -54,7 +54,9 @@
              </Columns>
 
          </asp:GridView>
-  </div>        
+  </div>      
+ <div class="col-md-1"></div> <!--pading-->
+</div>
 
          
          <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" SelectCommand="SELECT [idclientes], [nombre], [apellido], [rtn], [direccion], [telefono], [correo] FROM [clientes] WHERE ([idclientes] LIKE '%' + @idclientes + '%')">

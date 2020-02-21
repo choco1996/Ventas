@@ -120,6 +120,17 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\estiloslogin.css" />
     <Content Include="Content\css\navbar.css" />
+    <Content Include="Imagenes\Empleados\E1.jpg" />
+    <Content Include="Imagenes\Empleados\E2.jpg" />
+    <Content Include="PagM\Empleadosbus.aspx" />
+    <Content Include="PagM\Empleadoselim.aspx" />
+    <Content Include="PagM\Empleadosin.aspx" />
+    <Content Include="PagM\Empleadosmod.aspx" />
+    <Content Include="PagM\MenuEmpleados.aspx" />
+    <Content Include="PagM\MenuUsuarios.aspx" />
+    <Content Include="PagM\Usuariosbus.aspx" />
+    <Content Include="PagM\Usuarioselim.aspx" />
+    <Content Include="PagM\Usuariosmod.aspx" />
     <Content Include="Scripts\mascara.js" />
     <Content Include="Login.aspx" />
     <Content Include="PagM\Categoriasin.aspx" />
@@ -238,7 +249,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.vb" />
+    <Compile Include="Limpiar.vb" />
     <Compile Include="Login.aspx.designer.vb">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
@@ -300,6 +311,34 @@
       <DependentUpon>Clientesmod.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="PagM\Empleadosbus.aspx.designer.vb">
+      <DependentUpon>Empleadosbus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Empleadosbus.aspx.vb">
+      <DependentUpon>Empleadosbus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\Empleadoselim.aspx.designer.vb">
+      <DependentUpon>Empleadoselim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Empleadoselim.aspx.vb">
+      <DependentUpon>Empleadoselim.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\Empleadosin.aspx.designer.vb">
+      <DependentUpon>Empleadosin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Empleadosin.aspx.vb">
+      <DependentUpon>Empleadosin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\Empleadosmod.aspx.designer.vb">
+      <DependentUpon>Empleadosmod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Empleadosmod.aspx.vb">
+      <DependentUpon>Empleadosmod.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="PagM\MenuClientes.aspx.designer.vb">
       <DependentUpon>MenuClientes.aspx</DependentUpon>
     </Compile>
@@ -314,12 +353,26 @@
       <DependentUpon>Menu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="PagM\MenuEmpleados.aspx.designer.vb">
+      <DependentUpon>MenuEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\MenuEmpleados.aspx.vb">
+      <DependentUpon>MenuEmpleados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="PagM\MenuM.Master.designer.vb">
       <DependentUpon>MenuM.Master</DependentUpon>
     </Compile>
     <Compile Include="PagM\MenuM.Master.vb">
       <DependentUpon>MenuM.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagM\MenuUsuarios.aspx.designer.vb">
+      <DependentUpon>MenuUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\MenuUsuarios.aspx.vb">
+      <DependentUpon>MenuUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagM\PagM.Master.designer.vb">
       <DependentUpon>PagM.Master</DependentUpon>
@@ -342,11 +395,32 @@
       <DependentUpon>Proveedorin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="PagM\Usuariosbus.aspx.designer.vb">
+      <DependentUpon>Usuariosbus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Usuariosbus.aspx.vb">
+      <DependentUpon>Usuariosbus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\Usuarioselim.aspx.designer.vb">
+      <DependentUpon>Usuarioselim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Usuarioselim.aspx.vb">
+      <DependentUpon>Usuarioselim.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="PagM\Usuariosin.aspx.designer.vb">
       <DependentUpon>Usuariosin.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagM\Usuariosin.aspx.vb">
       <DependentUpon>Usuariosin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\Usuariosmod.aspx.designer.vb">
+      <DependentUpon>Usuariosmod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\Usuariosmod.aspx.vb">
+      <DependentUpon>Usuariosmod.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagVent\PagVent.Master.designer.vb">
@@ -418,6 +492,7 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\vb\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\vb\Microsoft.NetFramework.VisualBasic.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

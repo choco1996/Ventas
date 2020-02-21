@@ -11,25 +11,25 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Usuarios
+Partial Public Class Empleadosin
 
     '''<summary>
-    '''Control txtid.
+    '''Control txtnombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtid As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtnombre As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtcontraseña.
+    '''Control txtapellido.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtcontraseña As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtapellido As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control txtidentidad.
@@ -41,22 +41,22 @@ Partial Public Class Usuarios
     Protected WithEvents txtidentidad As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control RadioButtonList1.
+    '''Control txttelefono.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents txttelefono As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control RadioButtonList2.
+    '''Control txtdireccion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents txtdireccion As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnguardar.

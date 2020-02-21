@@ -15,35 +15,30 @@
 </head>
 <body>
     <header>
-       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<ul class="navbar-nav">
- <!-- Dropdown -->
-    >
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Modulos
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="MenuClientes.aspx">Clientes</a>
-        <a class="dropdown-item" href="Producto.aspx">Producto</a>
-        <a class="dropdown-item" href="Proveedor.aspx">Proveedor</a>
-        <a class="dropdown-item" href="Usuarios.aspx">Usuarios</a>
-        <a class="dropdown-item" href="Categorias.aspx">Categoria</a>
-      </div>
-    </li>
-  </ul>
- <ul class="nav navbar-nav navbar-center">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="MenuEmpleados.aspx">Empleados</a>
+          <a class="dropdown-item" href="MenuClientes.aspx">Clientes</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="MenuUsuarios.aspx">Usuarios</a>
+        </div>
+      </li>
+    </ul>
+       <ul class="nav navbar-nav navbar-center">
       <a class="navbar-brand" href="Menu.aspx">Maxi Despensa</a>
   </ul>
- <!-- Brand -->
- 
- <ul class="navbar-nav ml-auto">
-    <!-- Links -->
-    <li class="nav-item">
-      <a class="nav-link" href="/Login.aspx">Cerrar Sesion</a>
-    </li>
- </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-warning my-2 my-sm-0" type="submit">Cerrar Sesion</button>
+    </form>
+  </div>
 </nav>
+     
 
 </header>
     <form id="form1" runat="server">

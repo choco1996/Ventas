@@ -11,16 +11,52 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Usuarios
+Partial Public Class Usuariosmod
 
     '''<summary>
-    '''Control txtid.
+    '''Control RadioButtonList3.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtid As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadioButtonList3 As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''Control txtbusqueda.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtbusqueda As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control btnbusqueda.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnbusqueda As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btnselecion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnselecion As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control GridView1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
     '''Control txtcontraseña.
@@ -59,13 +95,13 @@ Partial Public Class Usuarios
     Protected WithEvents RadioButtonList2 As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
-    '''Control btnguardar.
+    '''Control btnedicion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnguardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnedicion As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control SqlDataSource1.
@@ -75,4 +111,13 @@ Partial Public Class Usuarios
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''Control SqlDataSource2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource2 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
