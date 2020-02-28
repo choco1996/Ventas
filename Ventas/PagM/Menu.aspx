@@ -38,24 +38,24 @@
     <div class="card-body text-center">
       <h5 class="card-title">Clientes</h5>
     <p class="card-text">Submenu para interactuar con los datos del Cliente</p>
-    <div class="card-footer"><a class="btn btn-outline-info" href="MenuClientes.aspx" role="button">Entrar</a></div>
     </div>
+      <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuClientes.aspx" role="button">Entrar</a></div>
 </div>
  <div class="card" style="max-width: 20rem;">
     <div class="card-header">Menu</div>
     <div class="card-body text-center">
       <h5 class="card-title">Empleados</h5>
     <p class="card-text">Submenu para interactuar con los datos del Empleado</p>
-    <div class="card-footer"><a class="btn btn-outline-info" href="MenuEmpleados.aspx" role="button">Entrar</a></div>
     </div>
+     <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuEmpleados.aspx" role="button">Entrar</a></div>
   </div>
   <div class="card" style="max-width: 20rem;">
     <div class="card-header">Menu</div>
     <div class="card-body text-center">
       <h5 class="card-title">Usuarios</h5>
     <p class="card-text">Submenu para interactuar con los datos del Usuario</p>
-    <div class="card-footer "><a class="btn btn-outline-info" href="MenuUsuarios.aspx" role="button">Entrar</a></div>
     </div>
+      <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuUsuarios.aspx" role="button">Entrar</a></div>
   </div>
 </div>
 </div>
@@ -68,16 +68,16 @@
     <div class="card-body text-center">
       <h5 class="card-title">Proveedor</h5>
     <p class="card-text">Submenu para interactuar con los datos del Proveedor</p>
-    <div class="card-footer"><a class="btn btn-outline-info" href="" role="button">Entrar</a></div>
     </div>
+      <div class="card-footer text-center"><a class="btn btn-outline-info" href="" role="button">Entrar</a></div>
 </div>
   <div class="card"style="max-width: 20rem;">
     <div class="card-header">Menu</div>
     <div class="card-body text-center">
       <h5 class="card-title">Producto</h5>
     <p class="card-text">Submenu para interactuar con los datos de los Productos</p>
-    <div class="card-footer"><a class="btn btn-outline-info" href="" role="button">Entrar</a></div>
     </div>
+      <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuProductos.aspx" role="button">Entrar</a></div>
   </div>
 
 </div>

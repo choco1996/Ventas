@@ -29,7 +29,7 @@
             </div>
              <div class="form-group col-sm-6">
              <label>Identidad</label>
-             <asp:TextBox ID="txtidentidad" runat="server" CssClass="form-control input-sm"/>
+             <asp:TextBox ID="txtidentidad" TextMode="Number" runat="server" CssClass="form-control input-sm"/>
             </div>
              <div class="form-group col-sm-6">
              <label>Telefono</label>
