@@ -3,7 +3,28 @@
     <title>Usuarios</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%=txtidentidad.ClientID%>').inputmask("9999-9999-99999");
+        });
 
+    </script>
+        <script>
+            function alertme() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Accion ejecutada corretamente',
+
+                })
+            }
+            function errorme() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'No se pudo modificar el registro',
+                })
+            }
+     </script>
 <div class="jumbotron row justify-content-center">
      <h1 class="display-4 text-center">Edicion Usuario</h1>
 </div>
@@ -69,10 +90,12 @@
              <div class="form-group col-sm-6">
              <label>Contraseña</label>
              <asp:TextBox ID="txtcontraseña" runat="server" type="password" CssClass="form-control input-sm tip"/>
-            </div>
+             
+             </div>
              <div class="form-group col-sm-6">
              <label>Identidad del Empleado</label>
              <asp:TextBox ID="txtidentidad" runat="server" CssClass="form-control input-sm tip"/>
+             
             </div>
              <div class="form-group col-sm-12">
              <label>Activo</label>

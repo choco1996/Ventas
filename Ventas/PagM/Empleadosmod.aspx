@@ -1,8 +1,31 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="Empleadosmod.aspx.vb" Inherits="Ventas.Empleadosmod" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Modificacion Empleados</title>
+    <title>Empleados</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+         <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%=txttelefono.ClientID%>').inputmask("9999-9999");
+        });
+
+    </script>
+        <script>
+            function alertme() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Accion ejecutada corretamente',
+
+                })
+            }
+            function errorme() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'No se pudo modificar el registro',
+                })
+            }
+     </script>
+ 
               <div class="jumbotron row justify-content-center">
      <h1 class="display-4 text-center">Modificacion Empleados</h1>
  </div>
@@ -66,19 +89,22 @@
              <div class="form-group col-sm-6">
              <label>Nombre</label>
              <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control input-sm"/>
-
+             
              </div>
              <div class="form-group col-sm-6">
              <label>Apellido</label>
              <asp:TextBox ID="txtapellido" runat="server" CssClass="form-control input-sm"/>
+             
             </div>
          <div class="form-group col-sm-6">
              <label>Telefono</label>
              <asp:TextBox ID="txttelefono" runat="server" CssClass="form-control"/>
+             
          </div>
          <div class="form-group col-sm-12">
              <label>Direccion</label>
              <asp:TextBox ID="txtdireccion" runat="server" CssClass="form-control"/>
+             
          </div>
 
                  

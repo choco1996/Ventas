@@ -3,6 +3,27 @@
     <title>Eliminacion Empleados</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+       <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%=txteliminacion.ClientID%>').inputmask("9999-9999-99999");
+        });
+    </script>
+    <script>
+        function alertme() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Accion ejecutada corretamente',
+
+            })
+        }
+        function errorme() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No se pudo eliminar el registro',
+            })
+        }
+     </script>
              <div class="jumbotron row justify-content-center">
      <h1 class="display-4 text-center">Eliminacion de Empleados</h1>
  </div>

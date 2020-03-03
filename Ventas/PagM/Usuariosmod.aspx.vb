@@ -35,7 +35,12 @@
     End Sub
 
     Private Sub btnedicion_Click(sender As Object, e As EventArgs) Handles btnedicion.Click
-        SqlDataSource1.Update()
+        Try
+            SqlDataSource1.Update()
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
+        Catch ex As Exception
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
+        End Try
         Dim limpiar As New Limpiar
         limpiar.CleanControls(Me.Controls)
     End Sub

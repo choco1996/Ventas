@@ -12,8 +12,15 @@
                 GridView1.DataSourceID = ("SqlDataSource2")
         End Select
     End Sub
-
     Private Sub btneliminar_Click(sender As Object, e As EventArgs) Handles btneliminar.Click
-        SqlDataSource2.Delete()
+        Try
+            SqlDataSource2.Delete()
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
+        Catch ex As Exception
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
+        End Try
+        Dim Limpiar As New Limpiar
+        Limpiar.CleanControls(Me.Controls)
+
     End Sub
 End Class

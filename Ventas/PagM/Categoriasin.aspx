@@ -10,7 +10,7 @@
  <div class="container-sm"> <!-- Formulario -->
         <h3>Inserción de datos</h3>
        <hr class="my-4">
-
+</div>
      <div class="row"> <!-- Formulario centrado --> 
 <div class="col-md-3"></div>
      <div class="col-md-6 align-items-md-center">

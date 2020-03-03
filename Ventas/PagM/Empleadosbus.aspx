@@ -28,6 +28,7 @@
             </div>
              <div class="form-group col-sm-3">
                  <asp:Button ID="btnbusqueda" Text="Buscar" runat="server" CssClass="btn btn-primary"/>
+
             </div>
           
         

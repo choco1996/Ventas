@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="Clientesbus.aspx.vb" Inherits="Ventas.Clientesbus" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
     <title>Busqueda de Clientes</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

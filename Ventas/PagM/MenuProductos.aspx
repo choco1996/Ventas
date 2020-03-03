@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
              <div class="content jumbotron justify-content-center">
-    <h1 class="display-4 text-center">Clientes</h1>
+    <h1 class="display-4 text-center">Productos</h1>
     </div>
   <!-- <h2 class="display-5 text-center">Menu Principal</h2> -->
         <br />
@@ -14,15 +14,15 @@
     <div class="card-header">Accion</div>
     <div class="card-body text-center">
       <h5 class="card-title">Inserción</h5>
-    <p class="card-text">Agregar un nuevo cliente al sistema</p>
+    <p class="card-text">Agregar un nuevo producto al sistema</p>
     </div>
-      <div class="card-footer text-center"><a class="btn btn-outline-info" href="" role="button">Entrar</a></div>
+      <div class="card-footer text-center"><a class="btn btn-outline-info" href="Productoin.aspx" role="button">Entrar</a></div>
 </div>
   <div class="card"style="max-width: 20rem;">
     <div class="card-header">Accion</div>
     <div class="card-body text-center">
       <h5 class="card-title">Busqueda</h5>
-    <p class="card-text">Buscar un cliente en el sistema</p>
+    <p class="card-text">Buscar un producto en el sistema</p>
    </div>
       <div class="card-footer text-center"><a class="btn btn-outline-info" href="" type="button"">Entrar</a></div> 
   </div>
@@ -30,7 +30,7 @@
     <div class="card-header">Accion</div>
     <div class="card-body text-center">
       <h5 class="card-title">Modificar</h5>
-    <p class="card-text">Modificar un cliente en el sistema</p>
+    <p class="card-text">Modificar un producto en el sistema</p>
      </div>
       <div class="card-footer text-center"><a class="btn btn-outline-info" href="" role="button">Entrar</a></div>
   </div>
@@ -38,7 +38,7 @@
     <div class="card-header">Accion</div>
     <div class="card-body text-center">
       <h5 class="card-title">Eliminar</h5>
-    <p class="card-text">Eliminar un cliente en el sistema</p>
+    <p class="card-text">Eliminar un producto en el sistema</p>
     </div>
         <div class="card-footer text-center"><a class="btn btn-outline-info" href="" role="button">Entrar</a></div>
   </div>

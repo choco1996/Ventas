@@ -3,6 +3,22 @@
     <title>Producto</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <script>
+            function alertme() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Accion ejecutada corretamente',
+
+                })
+            }
+            function errorme() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'No se pudo modificar el registro',
+                })
+            }
+     </script>
     <div class="jumbotron row justify-content-center">
      <h1 class="display-4 text-center">Formulario Producto</h1>
  </div>
@@ -33,11 +49,12 @@
              <label>Categoria</label>
               <asp:ListView runat="server">
                   <ItemTemplate>Comestibles</ItemTemplate>
+                  <ItemTemplate>Otros</ItemTemplate>
               </asp:ListView>
          </div>
           <div class="text-center">
              <asp:Button Text="Guardar" ID="btnguardar" runat="server"  CssClass="btn btn-primary"/>
-             <asp:Button Text="Secundario" ID="Button1" runat="server"  CssClass="btn btn-primary"/>
+             
          </div>
         </div>
         

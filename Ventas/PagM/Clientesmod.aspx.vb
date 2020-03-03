@@ -31,7 +31,13 @@
 
 
     Protected Sub btneditar_Click(sender As Object, e As EventArgs) Handles btneditar.Click
-        SqlDataSource3.Update()
+        Try
+            SqlDataSource3.Update()
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
+        Catch ex As Exception
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
+        End Try
+
         Dim limpiar As New Limpiar
         limpiar.CleanControls(Me.Controls)
     End Sub

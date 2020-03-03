@@ -3,6 +3,31 @@
     <title>Inserción Empleados</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%=txtidentidad.ClientID%>').inputmask("9999-9999-99999");
+        });
+        $(document).ready(function () {
+            $('#<%=txttelefono.ClientID%>').inputmask("9999-9999");
+        });
+    </script>
+    <script>
+        function alertme() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Accion ejecutada corretamente',
+
+            })
+        }
+        function errorme() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No se pudo agregar el registro',
+            })
+        }
+     </script>
+ 
      <div class="jumbotron row justify-content-center">
      <h1 class="display-4 text-center">Nuevo Empleado</h1>
  </div>
@@ -21,15 +46,18 @@
          <div class="row">
              <div class="form-group col-sm-6">
              <label>Nombre</label>
-             <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control input-sm"/>
+             <asp:TextBox ID="txtnombre" runat="server" type="nombre" CssClass="form-control input-sm"/>
+             <asp:RequiredFieldValidator ControlToValidate="txtnombre" ErrorMessage="Introduzca un Nombre" runat="server" CssClass="text-danger"/>
              </div>
              <div class="form-group col-sm-6">
              <label>Apellido</label>
              <asp:TextBox ID="txtapellido" runat="server" CssClass="form-control input-sm"/>
+                 <asp:RequiredFieldValidator ControlToValidate="txtapellido" ErrorMessage="Introduzca un Apellido" runat="server" CssClass="text-danger"/>
             </div>
              <div class="form-group col-sm-6">
              <label>Identidad</label>
-             <asp:TextBox ID="txtidentidad" TextMode="Number" runat="server" CssClass="form-control input-sm"/>
+              <asp:TextBox ID="txtidentidad" runat="server" CssClass="form-control input-sm"/>
+                 <asp:RequiredFieldValidator ControlToValidate="txtidentidad" ErrorMessage="Introduzca la Identidad" runat="server" CssClass="text-danger"/>
             </div>
              <div class="form-group col-sm-6">
              <label>Telefono</label>
@@ -37,6 +65,7 @@
              </div><div class="form-group col-sm-12">
              <label>Direccion</label>
              <asp:TextBox ID="txtdireccion" runat="server" CssClass="form-control input-sm"/>
+                 <asp:RequiredFieldValidator ControlToValidate="txtdireccion" ErrorMessage="Introduzca la direccion" runat="server" CssClass="text-danger"/>
              </div>
           
       </div>  

@@ -3,6 +3,12 @@
     <title>Usuarios</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%=txtidentidad.ClientID%>').inputmask("9999-9999-99999");
+        });
+
+    </script>
     <div class="jumbotron row justify-content-center">
      <h1 class="display-4 text-center">Nuevo Usuario</h1>
  </div>
@@ -21,14 +27,17 @@
              <div class="form-group col-sm-6">
              <label>Usuario</label>
              <asp:TextBox ID="txtid" runat="server" CssClass="form-control input-sm"/>
+             <asp:RequiredFieldValidator ControlToValidate="txtid" ErrorMessage="Introduzca un ID para el Usuario" runat="server" CssClass="text-danger"/>
              </div>
              <div class="form-group col-sm-6">
              <label>Contraseña</label>
              <asp:TextBox ID="txtcontraseña" runat="server" type="password" CssClass="form-control input-sm tip"/>
+                 <asp:RequiredFieldValidator ControlToValidate="txtcontraseña" ErrorMessage="Introduzca una Contraseña" runat="server" CssClass="text-danger"/>
             </div>
              <div class="form-group col-sm-6">
              <label>Identidad del Empleado</label>
              <asp:TextBox ID="txtidentidad" runat="server" CssClass="form-control input-sm tip"/>
+                 <asp:RequiredFieldValidator ControlToValidate="txtidentidad" ErrorMessage="Introduzca la identidad del Usuario" runat="server" CssClass="text-danger"/>
             </div>
              <div class="form-group col-sm-12">
              <label>Activo</label>

@@ -16,7 +16,13 @@
     End Sub
 
     Protected Sub eliminar(sender As Object, e As EventArgs) Handles btneliminar.Click
-        SqlDataSource4.Delete()
+        Try
+            SqlDataSource4.Delete()
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
+        Catch ex As Exception
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
+        End Try
+
     End Sub
 
 End Class
