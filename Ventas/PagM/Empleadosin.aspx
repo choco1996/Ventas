@@ -62,6 +62,8 @@
              <div class="form-group col-sm-6">
              <label>Telefono</label>
              <asp:TextBox ID="txttelefono" runat="server" CssClass="form-control input-sm"/>
+             <asp:RequiredFieldValidator ControlToValidate="txttelefono" ErrorMessage="Introduzca el telefono" runat="server" CssClass="text-danger"/>
+
              </div><div class="form-group col-sm-12">
              <label>Direccion</label>
              <asp:TextBox ID="txtdireccion" runat="server" CssClass="form-control input-sm"/>

@@ -4,7 +4,9 @@ Public Class Login
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        Response.Cache.SetCacheability(HttpCacheability.ServerAndNoCache)
+        Response.Cache.SetAllowResponseInBrowserHistory(False)
+        Response.Cache.SetNoStore()
     End Sub
     Private Sub consulta2()
         Dim datos As New GridView
@@ -26,18 +28,16 @@ Public Class Login
                             Response.Redirect("PagVent/Menu.aspx")
                         Case "3"
                             Response.Redirect("PagVisor/Menu.aspx")
-                        Case Else
-                            Response.Redirect("PagC/Menu.aspx")
                     End Select
                 End If
             Else
-                MsgBox("contraseña Incorrecta", MsgBoxStyle.Critical, "Error")
+                ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
                 Me.txtclave.Text = ""
 
             End If
 
         Else
-            MsgBox("Usuario Incorrecto", MsgBoxStyle.Critical, "Error")
+            ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
             Me.txtUsuario.Text = ""
             Me.txtclave.Text = ""
 

@@ -37,11 +37,11 @@
  
          <asp:GridView ID="GridView1" runat="server"   AllowPaging="True" AutoGenerateColumns="False"  CssClass="table table-striped" AllowSorting="True" DataKeyNames="idusuario" DataSourceID="SqlDataSource2" >
              <Columns>
-                 <asp:BoundField DataField="idusuario" HeaderText="Usuario" ReadOnly="True" SortExpression="idusuario" />
-                 <asp:BoundField DataField="contraseña" HeaderText="Contraseña" SortExpression="contraseña" />
+                 <asp:BoundField DataField="idusuario" HeaderText="idusuario" ReadOnly="True" SortExpression="idusuario" />
+                 <asp:BoundField DataField="contraseña" HeaderText="contraseña" SortExpression="contraseña" />
                  <asp:BoundField DataField="activo" HeaderText="activo" SortExpression="activo" />
-                 <asp:BoundField DataField="identidad" HeaderText="Identidad del Usuario" SortExpression="identidad" />
-                 <asp:BoundField DataField="idtipousuario" HeaderText="Tipo de usuario" SortExpression="idtipousuario" />
+                 <asp:BoundField DataField="identidad" HeaderText="identidad" SortExpression="identidad" />
+                 <asp:BoundField DataField="tipousuario" HeaderText="tipousuario" SortExpression="tipousuario" />
              </Columns>
 
          </asp:GridView>
@@ -55,5 +55,5 @@
         </SelectParameters>
     </asp:SqlDataSource>
 
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" SelectCommand="SELECT * FROM [usuarios]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" SelectCommand="SELECT usuarios.idusuario, usuarios.contraseña, usuarios.activo, usuarios.identidad, tipousuario.tipousuario FROM usuarios INNER JOIN tipousuario ON usuarios.idtipousuario = tipousuario.idtipousuario"></asp:SqlDataSource>
 </asp:Content>

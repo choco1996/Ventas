@@ -13,4 +13,14 @@
                 GridView1.DataSourceID = ("SqlDataSource1")
         End Select
     End Sub
+    Protected Sub GridView1_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles GridView1.RowDataBound
+        If (e.Row.RowType = DataControlRowType.DataRow) Then
+            Select Case e.Row.Cells(2).Text
+                Case "1"
+                    e.Row.Cells(2).Text = "Activo"
+                Case "2"
+                    e.Row.Cells(2).Text = "Inactivo"
+            End Select
+        End If
+    End Sub
 End Class

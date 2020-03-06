@@ -48,7 +48,7 @@
              <asp:TextBox ID="txtbusqueda" runat="server" CssClass="form-control input-sm"/>
             </div>
              <div class="form-group col-sm-3">
-                 <asp:Button ID="btnbusqueda" Text="Buscar" runat="server" CssClass="btn btn-primary"/>
+                 <asp:Button ID="btnbusqueda" Text="Buscar" runat="server" CssClass="btn btn-primary" CausesValidation="False"/>
                  <asp:Button ID="btnselecion" Text="Selecionar" runat="server" CssClass="btn btn-primary"/>
             </div>
           
@@ -65,11 +65,11 @@
  
          <asp:GridView ID="GridView1" runat="server"   AllowPaging="True" AutoGenerateColumns="False"  CssClass="table table-striped" AllowSorting="True" DataKeyNames="idusuario" DataSourceID="SqlDataSource2" >
              <Columns>
-                 <asp:BoundField DataField="idusuario" HeaderText="Usuario" ReadOnly="True" SortExpression="idusuario" />
-                 <asp:BoundField DataField="contraseña" HeaderText="Contraseña" SortExpression="contraseña" />
+                 <asp:BoundField DataField="idusuario" HeaderText="idusuario" ReadOnly="True" SortExpression="idusuario" />
+                 <asp:BoundField DataField="contraseña" HeaderText="contraseña" SortExpression="contraseña" />
                  <asp:BoundField DataField="activo" HeaderText="activo" SortExpression="activo" />
-                 <asp:BoundField DataField="identidad" HeaderText="Identidad del Usuario" SortExpression="identidad" />
-                 <asp:BoundField DataField="idtipousuario" HeaderText="Tipo de usuario" SortExpression="idtipousuario" />
+                 <asp:BoundField DataField="identidad" HeaderText="identidad" SortExpression="identidad" />
+                 <asp:BoundField DataField="tipousuario" HeaderText="tipousuario" SortExpression="tipousuario" />
              </Columns>
 
          </asp:GridView>
@@ -123,7 +123,7 @@
 </div>
 <div class="col-md-3"></div> <!--pading-->
 </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" DeleteCommand="DELETE FROM [usuarios] WHERE [idusuario] = @idusuario" InsertCommand="INSERT INTO [usuarios] ([idusuario], [contraseña], [activo], [identidad], [idtipousuario]) VALUES (@idusuario, @contraseña, @activo, @identidad, @idtipousuario)" SelectCommand="SELECT * FROM [usuarios] WHERE ([idusuario] = @idusuario)" UpdateCommand="UPDATE [usuarios] SET [contraseña] = @contraseña, [activo] = @activo, [identidad] = @identidad, [idtipousuario] = @idtipousuario WHERE [idusuario] = @idusuario">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" DeleteCommand="DELETE FROM [usuarios] WHERE [idusuario] = @idusuario" InsertCommand="INSERT INTO [usuarios] ([idusuario], [contraseña], [activo], [identidad], [idtipousuario]) VALUES (@idusuario, @contraseña, @activo, @identidad, @idtipousuario)" SelectCommand="SELECT usuarios.idusuario, usuarios.contraseña, usuarios.activo, usuarios.identidad, tipousuario.tipousuario FROM usuarios INNER JOIN tipousuario ON usuarios.idtipousuario = tipousuario.idtipousuario WHERE ([idusuario] = @idusuario)" UpdateCommand="UPDATE [usuarios] SET [contraseña] = @contraseña, [activo] = @activo, [identidad] = @identidad, [idtipousuario] = @idtipousuario WHERE [idusuario] = @idusuario">
         <DeleteParameters>
             <asp:Parameter Name="idusuario" Type="String" />
         </DeleteParameters>
@@ -146,6 +146,6 @@
         </UpdateParameters>
     </asp:SqlDataSource>
 
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" SelectCommand="SELECT * FROM [usuarios]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" SelectCommand="SELECT usuarios.idusuario, usuarios.contraseña, usuarios.activo, usuarios.identidad, tipousuario.tipousuario FROM usuarios INNER JOIN tipousuario ON usuarios.idtipousuario = tipousuario.idtipousuario"></asp:SqlDataSource>
 
 </asp:Content>

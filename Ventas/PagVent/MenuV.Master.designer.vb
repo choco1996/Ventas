@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class PagVent
+Partial Public Class MenuV
 
     '''<summary>
     '''Control head.

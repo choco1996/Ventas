@@ -2,7 +2,7 @@
 
 Public Class Empleadosin
     Inherits System.Web.UI.Page
-    Public er As String
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub

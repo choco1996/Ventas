@@ -3,8 +3,24 @@
     <title>Categorias</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script>
+        function alertme() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Accion ejecutada corretamente',
+
+            })
+        }
+        function errorme() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No se pudo agregar el registro',
+            })
+        }
+     </script>
         <div class="jumbotron row justify-content-center">
-     <h1 class="display-4 text-center">Formulario Categorias de Producto</h1>
+     <h1 class="display-4 text-center"> Categorias de Producto</h1>
  </div>
 <br />
  <div class="container-sm"> <!-- Formulario -->
@@ -15,26 +31,41 @@
 <div class="col-md-3"></div>
      <div class="col-md-6 align-items-md-center">
          <div class="form-group">
-             <label>Nombre</label>
+             <label>ID de la Categoria</label>
+             <asp:TextBox ID="txtid" runat="server" CssClass="form-control" TextMode="Number"/>
+             <asp:RequiredFieldValidator ControlToValidate="txtid" ErrorMessage="Introduzca el ID" runat="server" CssClass="text-danger"/>
+         </div>
+          <div class="form-group">
+             <label>Nombre de la Categoria</label>
              <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control"/>
+             <asp:RequiredFieldValidator ControlToValidate="txtnombre" ErrorMessage="Introduzca el Nombre" runat="server" CssClass="text-danger"/>
          </div>
           <div class="form-group">
-             <label>Direccion</label>
-             <asp:TextBox ID="txtdireccion" runat="server" CssClass="form-control"/>
+             <label>Descripcion</label>
+             <asp:TextBox ID="txtdescripcion" TextMode="multiline" Columns="50" Rows="7" runat="server" CssClass="form-control"/>
+              <asp:RequiredFieldValidator ControlToValidate="txtdescripcion" ErrorMessage="Introduzca una Descripcion" runat="server" CssClass="text-danger"/>
          </div>
-          <div class="form-group">
-             <label>Telefono</label>
-             <asp:TextBox ID="txttelefono" runat="server" CssClass="form-control"/>
-         </div>
-          <div class="form-group">
-             <label>Correo</label>
-             <asp:TextBox ID="txtcorreo" runat="server" CssClass="form-control"/>
-        <div class="text-center">
+         <div class="text-center">
              <asp:Button Text="Guardar" ID="btnguardar" runat="server"  CssClass="btn btn-primary"/>
         </div>
-        </div>
+        </div>   
         
  <div class="col-md-3"></div><!--pading-->
-    </div>      
+       
 </div>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" DeleteCommand="DELETE FROM [categorias] WHERE [idcategoria] = @idcategoria" InsertCommand="INSERT INTO [categorias] ([idcategoria], [nombre], [descripcion]) VALUES (@idcategoria, @nombre, @descripcion)" SelectCommand="SELECT * FROM [categorias]" UpdateCommand="UPDATE [categorias] SET [nombre] = @nombre, [descripcion] = @descripcion WHERE [idcategoria] = @idcategoria">
+        <DeleteParameters>
+            <asp:Parameter Name="idcategoria" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:ControlParameter ControlID="txtid" Name="idcategoria" PropertyName="Text" Type="Int32" />
+            <asp:ControlParameter ControlID="txtnombre" Name="nombre" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="txtdescripcion" Name="descripcion" PropertyName="Text" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="nombre" Type="String" />
+            <asp:Parameter Name="descripcion" Type="String" />
+            <asp:Parameter Name="idcategoria" Type="Int32" />
+        </UpdateParameters>
+        </asp:SqlDataSource>
 </asp:Content>

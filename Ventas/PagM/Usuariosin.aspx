@@ -9,6 +9,22 @@
         });
 
     </script>
+            <script>
+                function alertme() {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Accion ejecutada corretamente',
+
+                    })
+                }
+                function errorme() {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'No se pudo modificar el registro',
+                    })
+                }
+     </script>
     <div class="jumbotron row justify-content-center">
      <h1 class="display-4 text-center">Nuevo Usuario</h1>
  </div>
@@ -107,7 +123,7 @@
 
              </div>
              <div class="form-group col-sm-3">
-                 <asp:Button ID="btnbusqueda" Text="Buscar" runat="server" CssClass="btn btn-primary"/>
+                 <asp:Button ID="btnbusqueda" Text="Buscar" runat="server" CssClass="btn btn-primary" CausesValidation="False"/>
             </div>
           
         

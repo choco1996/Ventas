@@ -11,5 +11,5 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Productosin
+Partial Public Class MenuClientes
 End Class

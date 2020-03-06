@@ -8,9 +8,25 @@
     <title>Login</title>
     <link href="Content/css/estiloslogin.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Scripts/perso/swalert.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/jquery-3.4.1.min.js"></script>
 </head>
+            <script>
+            function alertme() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Usuario Incorrecto',
+
+                })
+            }
+            function errorme() {
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Contraseña Incorrecta',
+                })
+            }
+     </script>
 <body>
     <div class="jumbotron arequipa">
         <div class="row">

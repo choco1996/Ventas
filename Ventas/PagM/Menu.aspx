@@ -79,6 +79,14 @@
     </div>
       <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuProductos.aspx" role="button">Entrar</a></div>
   </div>
+  <div class="card"style="max-width: 20rem;">
+    <div class="card-header">Menu</div>
+    <div class="card-body text-center">
+      <h5 class="card-title">Categoria Producto</h5>
+    <p class="card-text">Submenu para interactuar con los datos de las Categorias de los Productos</p>
+    </div>
+      <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuCategoria.aspx" role="button">Entrar</a></div>
+  </div>
 
 </div>
 </div>

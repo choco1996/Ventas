@@ -1,0 +1,85 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MenuV.master.vb" Inherits="Ventas.MenuV" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <link href="../Content/css/navbar.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+<footer class="page-footer font-small indigo">
+
+  <!-- Footer Links -->
+  <div class="container" style="padding-top:0">
+
+    <!-- Grid row-->
+    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">About us</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="Menu.aspx">Menu Principal</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Contact</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="/Login.aspx">Cerrar Sesion</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row-->
+    <hr class="my-4">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright : Derechos Reservados
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    <!-- Optional JavaScript -->
+   
+  <style type="text/css">
+    .navbar-nav.navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+
+    }
+    .carousel-caption {
+    top: 40%;
+    bottom: auto;
+    
+}
+    </style>
+  <script>
+        $('.carousel').carousel({
+            interval: 3000
+    })</script>
+</body>
+</html>

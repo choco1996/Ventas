@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class Categorias
 
     '''<summary>
+    '''Control txtid.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtid As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control txtnombre.
     '''</summary>
     '''<remarks>
@@ -23,31 +32,13 @@ Partial Public Class Categorias
     Protected WithEvents txtnombre As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtdireccion.
+    '''Control txtdescripcion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtdireccion As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txttelefono.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txttelefono As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtcorreo.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtcorreo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtdescripcion As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnguardar.
@@ -57,4 +48,13 @@ Partial Public Class Categorias
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnguardar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
