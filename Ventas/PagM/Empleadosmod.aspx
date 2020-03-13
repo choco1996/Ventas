@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="Empleadosmod.aspx.vb" Inherits="Ventas.Empleadosmod" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="Empleadosmod.aspx.vb" Inherits="Ventas.Empleadosmod" fileEncoding="utf-8"
+  requestEncoding="utf-8"
+  responseEncoding="utf-8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Empleados</title>
 </asp:Content>

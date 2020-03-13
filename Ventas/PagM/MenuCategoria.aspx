@@ -24,7 +24,7 @@
       <h5 class="card-title">Modificar</h5>
     <p class="card-text">Modificar un Categoria en el sistema</p>
  </div>
-    <div class="card-footer text-center"><a class="btn btn-outline-info" href="" role="button">Entrar</a></div>
+    <div class="card-footer text-center"><a class="btn btn-outline-info" href="CategoriaMod.aspx" role="button">Entrar</a></div>
   </div>
  <div class="card"style="max-width: 20rem;">
     <div class="card-header">Accion</div>
@@ -32,7 +32,7 @@
       <h5 class="card-title">Eliminar</h5>
     <p class="card-text">Eliminar un Categoria en el sistema</p>
     </div>
- <div class="card-footer text-center"><a class="btn btn-outline-info" href="" role="button">Entrar</a></div>
+ <div class="card-footer text-center"><a class="btn btn-outline-info" href="CategoriaElim.aspx" role="button">Entrar</a></div>
 </div>
 </div>
 </div>

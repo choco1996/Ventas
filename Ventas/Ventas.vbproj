@@ -31,7 +31,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,6 +51,19 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>Ventas.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -143,6 +156,8 @@
     <Content Include="Content\css\navbar.css" />
     <Content Include="Imagenes\Empleados\E1.jpg" />
     <Content Include="Imagenes\Empleados\E2.jpg" />
+    <Content Include="PagM\CategoriaElim.aspx" />
+    <Content Include="PagM\CategoriaMod.aspx" />
     <Content Include="PagM\Empleadosbus.aspx" />
     <Content Include="PagM\Empleadoselim.aspx" />
     <Content Include="PagM\Empleadosin.aspx" />
@@ -151,6 +166,8 @@
     <Content Include="PagM\MenuEmpleados.aspx" />
     <Content Include="PagM\MenuProductos.aspx" />
     <Content Include="PagM\MenuUsuarios.aspx" />
+    <Content Include="PagM\ProductoElim.aspx" />
+    <Content Include="PagM\ProductoMod.aspx" />
     <Content Include="PagM\Usuariosbus.aspx" />
     <Content Include="PagM\Usuarioselim.aspx" />
     <Content Include="PagM\Usuariosmod.aspx" />
@@ -292,6 +309,20 @@
     </Compile>
     <Compile Include="Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagM\CategoriaElim.aspx.designer.vb">
+      <DependentUpon>CategoriaElim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\CategoriaElim.aspx.vb">
+      <DependentUpon>CategoriaElim.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\CategoriaMod.aspx.designer.vb">
+      <DependentUpon>CategoriaMod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\CategoriaMod.aspx.vb">
+      <DependentUpon>CategoriaMod.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagM\Categoriasin.aspx.designer.vb">
@@ -432,11 +463,25 @@
       <DependentUpon>PagM.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="PagM\ProductoElim.aspx.designer.vb">
+      <DependentUpon>ProductoElim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\ProductoElim.aspx.vb">
+      <DependentUpon>ProductoElim.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="PagM\Productoin.aspx.designer.vb">
       <DependentUpon>Productoin.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagM\Productoin.aspx.vb">
       <DependentUpon>Productoin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\ProductoMod.aspx.designer.vb">
+      <DependentUpon>ProductoMod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\ProductoMod.aspx.vb">
+      <DependentUpon>ProductoMod.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagM\Proveedorin.aspx.designer.vb">

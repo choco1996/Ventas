@@ -10,12 +10,12 @@
         datos.DataBind()
 
         If datos.Rows.Count > 0 Then
-            txtnombre.Text = datos.Rows(0).Cells(1).Text
-            txtapellido.Text = datos.Rows(0).Cells(2).Text
-            txtrtn.Text = datos.Rows(0).Cells(3).Text
-            txtdireccion.Text = datos.Rows(0).Cells(4).Text
-            txttelefono.Text = datos.Rows(0).Cells(5).Text
-            txtcorreo.Text = datos.Rows(0).Cells(6).Text
+            txtnombre.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(1).Text)
+            txtapellido.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(2).Text)
+            txtrtn.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(3).Text)
+            txtdireccion.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(4).Text)
+            txttelefono.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(5).Text)
+            txtcorreo.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(6).Text)
         End If
     End Sub
     Protected Sub boton(sender As Object, e As EventArgs) Handles btnbusqueda.Click

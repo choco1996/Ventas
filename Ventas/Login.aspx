@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Login</title>
@@ -28,6 +28,7 @@
             }
      </script>
 <body>
+    
     <div class="jumbotron arequipa">
         <div class="row">
             <div class="col-xl-12">
@@ -38,7 +39,8 @@
             <div class="form-group">
                 <asp:Label ID="lblusuario" runat="server" Text="Usuario" CssClass="control-label col-sm-2"></asp:Label>
                 <div class="col-sm-12">
-                    <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>  
+                    <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>
+                    
                 </div>
             </div>
             <div class="form-group">
@@ -59,5 +61,6 @@
             <asp:ControlParameter ControlID="txtUsuario" Name="idusuario" PropertyName="Text" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
+   
 </body>
 </html>

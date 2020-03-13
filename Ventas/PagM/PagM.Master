@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-
+<meta charset="UTF-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -36,10 +36,12 @@
       </li>
     </ul>
        <ul class="nav navbar-nav navbar-center">
-      <a class="navbar-brand" href="Menu.aspx">Maxi Despensa</a>
+      <a class="navbar-brand" href="Menu.aspx">Maxi Despensa </a>
+     
   </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a class="btn btn-warning my-2 my-sm-0" href="../Login.aspx">Cerrar Sesion</a>
+      <label class="navbar-brand">Usuario</label><asp:Label ID="label1" runat="server" CssClass="navbar-brand text-body text-info"></asp:Label>
+      <a class="btn btn-warning my-2 my-sm-0" href="../Login.aspx">Cerrar Sesion</a> 
     </form>
   </div>
 </nav>
