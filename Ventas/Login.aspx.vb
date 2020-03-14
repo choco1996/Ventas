@@ -1,6 +1,4 @@
-﻿Imports System.Data.SqlClient
-Imports System.Web
-Public Class Login
+﻿Public Class Login
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -10,10 +8,10 @@ Public Class Login
             Response.Cookies("logtip").Expires = DateTime.Now.AddDays(-1)
         End If
     End Sub
+
     Private Sub consulta2()
         Dim us, tip As String
         Dim datos As New GridView
-
 
         datos.DataSource = Me.SqlDataSource1
         datos.DataBind()
@@ -43,16 +41,12 @@ Public Class Login
                 End If
             Else
                 ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
-
-
             End If
-
         Else
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
-
-
         End If
     End Sub
+
     Protected Sub Btnlogin_Click(sender As Object, e As EventArgs) Handles Btnlogin.Click
         consulta2()
     End Sub

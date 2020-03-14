@@ -13,6 +13,7 @@
                 GridView1.DataSourceID = ("SqlDataSource1")
         End Select
     End Sub
+
     Protected Sub GridView1_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles GridView1.RowDataBound
         If (e.Row.RowType = DataControlRowType.DataRow) Then
             Select Case e.Row.Cells(2).Text
@@ -23,4 +24,5 @@
             End Select
         End If
     End Sub
+
 End Class

@@ -4,6 +4,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         GridView1.DataSourceID = ("SqlDataSource2")
     End Sub
+
     Private Sub relleno()
         Dim datos As New GridView
         datos.DataSource = Me.SqlDataSource1
@@ -30,6 +31,7 @@
                 RadioButtonList2.SelectedIndex = 2
         End Select
     End Sub
+
     Private Sub btnselecion_Click(sender As Object, e As EventArgs) Handles btnselecion.Click
         relleno()
     End Sub
@@ -53,6 +55,7 @@
                 GridView1.DataSourceID = ("SqlDataSource1")
         End Select
     End Sub
+
     Protected Sub GridView1_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles GridView1.RowDataBound
         If (e.Row.RowType = DataControlRowType.DataRow) Then
             Select Case e.Row.Cells(2).Text
@@ -63,4 +66,5 @@
             End Select
         End If
     End Sub
+
 End Class

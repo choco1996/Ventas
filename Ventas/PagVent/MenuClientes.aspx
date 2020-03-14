@@ -24,13 +24,9 @@
       <h5 class="card-title">Busqueda</h5>
     <p class="card-text">Buscar un cliente en el sistema</p>
    </div>
-      <div class="card-footer text-center"><a class="btn btn-outline-info" href="" type="button"">Entrar</a></div> 
+      <div class="card-footer text-center"><a class="btn btn-outline-info" href="" type="button"">Entrar</a></div>
   </div>
-  
 </div>
 </div>
 <br />
-   
-  
-   
 </asp:Content>

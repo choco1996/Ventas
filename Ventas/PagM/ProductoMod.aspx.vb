@@ -4,6 +4,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         GridView1.DataSourceID = "SqlDataSource2"
     End Sub
+
     'Protected Sub Prob()
     '    Dim strConnString As String = ConfigurationManager.ConnectionStrings("Ventas.My.MySettings.Conect").ConnectionString
     'End Sub
@@ -17,6 +18,7 @@
             End Select
         End If
     End Sub
+
     Private Sub relleno()
         Dim a, b As String
         Dim datos As New GridView
@@ -36,6 +38,7 @@
             DropDownList1.SelectedItem.Text = b
         End If
     End Sub
+
     Protected Sub mood()
         Try
             SqlDataSource3.Update()
@@ -65,4 +68,5 @@
                 GridView1.DataSourceID = "SqlDataSource4"
         End Select
     End Sub
+
 End Class

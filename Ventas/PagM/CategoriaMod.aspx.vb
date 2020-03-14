@@ -15,6 +15,7 @@
                 GridView1.DataSourceID = "SqlDataSource3"
         End Select
     End Sub
+
     Private Sub relleno()
         Dim datos As New GridView
         datos.DataSource = Me.SqlDataSource2
@@ -39,4 +40,5 @@
     Private Sub btnselecion_Click(sender As Object, e As EventArgs) Handles btnselecion.Click
         relleno()
     End Sub
+
 End Class

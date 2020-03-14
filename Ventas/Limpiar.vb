@@ -1,6 +1,5 @@
-﻿
-Imports System.Configuration
-Public Class Limpiar
+﻿Public Class Limpiar
+
     Public Sub CleanControls(ByVal controles As ControlCollection)
         For Each control As Control In controles
             If TypeOf control Is TextBox Then

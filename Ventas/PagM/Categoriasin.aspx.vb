@@ -15,4 +15,5 @@
         Dim Limpiar As New Limpiar
         Limpiar.CleanControls(Me.Controls)
     End Sub
+
 End Class

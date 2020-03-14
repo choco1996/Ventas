@@ -4,6 +4,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         GridView1.DataSourceID = ("SqlDataSource1")
     End Sub
+
     Private Sub relleno()
         Dim datos As New GridView
         datos.DataSource = Me.SqlDataSource2
@@ -41,4 +42,5 @@
         Dim limpiar As New Limpiar
         limpiar.CleanControls(Me.Controls)
     End Sub
+
 End Class

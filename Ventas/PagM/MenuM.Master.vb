@@ -12,5 +12,4 @@
         label1.Text = Request.Cookies("Log").Value
     End Sub
 
-
 End Class

@@ -21,7 +21,6 @@
                 Catch ex As Exception
                     ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
                 End Try
-
         End Select
     End Sub
 
@@ -29,10 +28,10 @@
         Try
             SqlDataSource1.Delete()
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
-
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
         End Try
 
     End Sub
+
 End Class

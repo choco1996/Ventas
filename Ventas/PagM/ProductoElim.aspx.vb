@@ -4,6 +4,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
+
     Protected Sub GridView1_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles GridView1.RowDataBound
         If (e.Row.RowType = DataControlRowType.DataRow) Then
             Select Case e.Row.Cells(2).Text
@@ -20,9 +21,17 @@
             Case 1
                 GridView1.DataSourceID = "SqlDataSource1"
             Case 2
-                GridView1.DataSourceID = "SqlDataSource2"
+                Try
+                    GridView1.DataSourceID = "SqlDataSource2"
+                Catch ex As Exception
+                    ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
+                End Try
             Case 3
-                GridView1.DataSourceID = "SqlDataSource3"
+                Try
+                    GridView1.DataSourceID = "SqlDataSource3"
+                Catch ex As Exception
+                    ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
+                End Try
         End Select
     End Sub
 
@@ -30,10 +39,10 @@
         Try
             SqlDataSource2.Delete()
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
-
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
         End Try
 
     End Sub
+
 End Class

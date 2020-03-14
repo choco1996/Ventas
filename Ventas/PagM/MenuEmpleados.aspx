@@ -24,7 +24,8 @@
       <h5 class="card-title">Busqueda</h5>
     <p class="card-text">Buscar un Empleado en el sistema</p>
      </div>
-      <div class="card-footer text-center"><a class="btn btn-outline-info" href="Empleadosbus.aspx" type="button"">Entrar</a></div>   
+      <div class="card-footer text-center"><a class="btn btn-outline-info" href="Empleadosbus.aspx" type="button"">Entrar</a>
+      </div>
   </div>
   <div class="card"style="max-width: 20rem;">
     <div class="card-header">Accion</div>

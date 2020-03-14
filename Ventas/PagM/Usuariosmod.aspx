@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="Usuariosmod.aspx.vb" Inherits="Ventas.Usuariosmod" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Usuarios</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <script type="text/javascript">
+    <script type="text/javascript">
         $(document).ready(function () {
             $('#<%=txtidentidad.ClientID%>').inputmask("9999-9999-99999");
         });
-
     </script>
-        <script>
+    <script>
             function alertme() {
                 Swal.fire({
                     icon: 'success',
@@ -24,105 +24,104 @@
                     text: 'No se pudo modificar el registro',
                 })
             }
-     </script>
-<div class="jumbotron row justify-content-center">
-     <h1 class="display-4 text-center">Edicion Usuario</h1>
-</div>
-<br />
-
- <div class="container-sm"> <!-- Formulario -->
-        <h3>Busqueda de Datos</h3>
-     <hr />
-   </div>
-     <div class="row"> <!-- Formulario centrado --> 
-<div class="col-md-1"></div> <!--pading-->
-     <div class="col-md-10 align-items-md-center">
-<div class="row">
-             <div class="form-group col-sm-5">
-             <asp:RadioButtonList ID="RadioButtonList3" runat="server" class="radio" RepeatColumns="4"  CellSpacing="7" CellPadding="7">               
-                        <asp:ListItem  Value="1" Text="Todos" Selected="True"></asp:ListItem>
-                        <asp:ListItem  Value="2" Text="Usuario"></asp:ListItem>
-             </asp:RadioButtonList>
-             </div>
-             <div class="form-group col-sm-4">
-             <asp:TextBox ID="txtbusqueda" runat="server" CssClass="form-control input-sm"/>
-            </div>
-             <div class="form-group col-sm-3">
-                 <asp:Button ID="btnbusqueda" Text="Buscar" runat="server" CssClass="btn btn-primary" CausesValidation="False"/>
-                 <asp:Button ID="btnselecion" Text="Selecionar" runat="server" CssClass="btn btn-primary"/>
-            </div>
-          
-        
-</div>
-         <div class="row">
-             <div class="form-group col-sm-4 text-center"></div>
-             <div class="form-group col-sm-4 text-center">
-                 <label>Escriba el codigo de usuario</label>
-                 <label class="alert alert-warning" role="alert">"Completo"</label>
-             </div>
-                 <div class="form-group col-sm-4 text-center"></div>
-</div>
- 
-         <asp:GridView ID="GridView1" runat="server"   AllowPaging="True" AutoGenerateColumns="False"  CssClass="table table-striped" AllowSorting="True" DataKeyNames="idusuario" DataSourceID="SqlDataSource2" >
-             <Columns>
-                 <asp:BoundField DataField="idusuario" HeaderText="idusuario" ReadOnly="True" SortExpression="idusuario" />
-                 <asp:BoundField DataField="contraseña" HeaderText="contraseña" SortExpression="contraseña" />
-                 <asp:BoundField DataField="activo" HeaderText="activo" SortExpression="activo" />
-                 <asp:BoundField DataField="identidad" HeaderText="identidad" SortExpression="identidad" />
-                 <asp:BoundField DataField="tipousuario" HeaderText="tipousuario" SortExpression="tipousuario" />
-             </Columns>
-
-         </asp:GridView>
-  </div>      
- <div class="col-md-1"></div> <!--pading-->
-</div>
-
-<div class="container-sm"> <!-- Formulario -->
-  <h3>Edicion de usuario</h3>
-<hr />
+    </script>
+    <div class="jumbotron row justify-content-center">
+        <h1 class="display-4 text-center">Edicion Usuario</h1>
+    </div>
     <br />
-</div>
-<!--Formulario de Edicion-->
-<div class="row"> <!-- Formulario centrado --> 
-<div class="col-md-3"></div> <!--pading-->
-     <div class="col-md-6 align-items-md-center">
-         <div class="row">
-             <div class="form-group col-sm-6">
-             <label>Contraseña</label>
-             <asp:TextBox ID="txtcontraseña" runat="server" type="password" CssClass="form-control input-sm tip"/>
-             
-             </div>
-             <div class="form-group col-sm-6">
-             <label>Identidad del Empleado</label>
-             <asp:TextBox ID="txtidentidad" runat="server" CssClass="form-control input-sm tip"/>
-             
+
+    <div class="container-sm">
+        <!-- Formulario -->
+        <h3>Busqueda de Datos</h3>
+        <hr />
+    </div>
+    <div class="row">
+        <!-- Formulario centrado -->
+        <div class="col-md-1"></div>
+        <!--pading-->
+        <div class="col-md-10 align-items-md-center">
+            <div class="row">
+                <div class="form-group col-sm-5">
+                    <asp:RadioButtonList ID="RadioButtonList3" runat="server" class="radio" RepeatColumns="4" CellSpacing="7" CellPadding="7">
+                        <asp:ListItem Value="1" Text="Todos" Selected="True"></asp:ListItem>
+                        <asp:ListItem Value="2" Text="Usuario"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group col-sm-4">
+                    <asp:TextBox ID="txtbusqueda" runat="server" CssClass="form-control input-sm" />
+                </div>
+                <div class="form-group col-sm-3">
+                    <asp:Button ID="btnbusqueda" Text="Buscar" runat="server" CssClass="btn btn-primary" CausesValidation="False" />
+                    <asp:Button ID="btnselecion" Text="Selecionar" runat="server" CssClass="btn btn-primary" />
+                </div>
             </div>
-             <div class="form-group col-sm-12">
-             <label>Activo</label>
-             <asp:RadioButtonList ID="RadioButtonList1" runat="server" class="radio" RepeatColumns="4"  CellSpacing="7" CellPadding="7">               
-                        <asp:ListItem  Value="1" Text="Activo" Selected="True"></asp:ListItem>
-                        <asp:ListItem  Value="2" Text="Inactivo"></asp:ListItem>
-                        
-              </asp:RadioButtonList>
-              
-         </div>
-          <div class="form-group col-sm-12" >
-              <label>Tipo de Usuario</label>
-             <asp:RadioButtonList ID="RadioButtonList2" runat="server" class="radio" RepeatColumns="6"  CellSpacing="7" CellPadding="7">               
-                        <asp:ListItem  Value="1" Text="Administrador" Selected="True"></asp:ListItem>
-                        <asp:ListItem  Value="2" Text="Vendedor"></asp:ListItem>
-                        <asp:ListItem  Value="3" Text="Supervisor"></asp:ListItem>
-                 
-              </asp:RadioButtonList>
-         </div>
-          
-      </div>  
-         <div class="text-center">
-                 <asp:Button Text="Editar" ID="btnedicion" runat="server"  CssClass="btn btn-primary"/>
-         </div>
-</div>
-<div class="col-md-3"></div> <!--pading-->
-</div>
+            <div class="row">
+                <div class="form-group col-sm-4 text-center"></div>
+                <div class="form-group col-sm-4 text-center">
+                    <label>Escriba el codigo de usuario</label>
+                    <label class="alert alert-warning" role="alert">"Completo"</label>
+                </div>
+                <div class="form-group col-sm-4 text-center"></div>
+            </div>
+
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="table table-striped" AllowSorting="True" DataKeyNames="idusuario" DataSourceID="SqlDataSource2">
+                <Columns>
+                    <asp:BoundField DataField="idusuario" HeaderText="idusuario" ReadOnly="True" SortExpression="idusuario" />
+                    <asp:BoundField DataField="contraseña" HeaderText="contraseña" SortExpression="contraseña" />
+                    <asp:BoundField DataField="activo" HeaderText="activo" SortExpression="activo" />
+                    <asp:BoundField DataField="identidad" HeaderText="identidad" SortExpression="identidad" />
+                    <asp:BoundField DataField="tipousuario" HeaderText="tipousuario" SortExpression="tipousuario" />
+                </Columns>
+            </asp:GridView>
+        </div>
+        <div class="col-md-1"></div>
+        <!--pading-->
+    </div>
+
+    <div class="container-sm">
+        <!-- Formulario -->
+        <h3>Edicion de usuario</h3>
+        <hr />
+        <br />
+    </div>
+    <!--Formulario de Edicion-->
+    <div class="row">
+        <!-- Formulario centrado -->
+        <div class="col-md-3"></div>
+        <!--pading-->
+        <div class="col-md-6 align-items-md-center">
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label>Contraseña</label>
+                    <asp:TextBox ID="txtcontraseña" runat="server" type="password" CssClass="form-control input-sm tip" />
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Identidad del Empleado</label>
+                    <asp:TextBox ID="txtidentidad" runat="server" CssClass="form-control input-sm tip" />
+                </div>
+                <div class="form-group col-sm-12">
+                    <label>Activo</label>
+                    <asp:RadioButtonList ID="RadioButtonList1" runat="server" class="radio" RepeatColumns="4" CellSpacing="7" CellPadding="7">
+                        <asp:ListItem Value="1" Text="Activo" Selected="True"></asp:ListItem>
+                        <asp:ListItem Value="2" Text="Inactivo"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+                <div class="form-group col-sm-12">
+                    <label>Tipo de Usuario</label>
+                    <asp:RadioButtonList ID="RadioButtonList2" runat="server" class="radio" RepeatColumns="6" CellSpacing="7" CellPadding="7">
+                        <asp:ListItem Value="1" Text="Administrador" Selected="True"></asp:ListItem>
+                        <asp:ListItem Value="2" Text="Vendedor"></asp:ListItem>
+                        <asp:ListItem Value="3" Text="Supervisor"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+            </div>
+            <div class="text-center">
+                <asp:Button Text="Editar" ID="btnedicion" runat="server" CssClass="btn btn-primary" />
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+        <!--pading-->
+    </div>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" DeleteCommand="DELETE FROM [usuarios] WHERE [idusuario] = @idusuario" InsertCommand="INSERT INTO [usuarios] ([idusuario], [contraseña], [activo], [identidad], [idtipousuario]) VALUES (@idusuario, @contraseña, @activo, @identidad, @idtipousuario)" SelectCommand="SELECT usuarios.idusuario, usuarios.contraseña, usuarios.activo, usuarios.identidad, tipousuario.tipousuario FROM usuarios INNER JOIN tipousuario ON usuarios.idtipousuario = tipousuario.idtipousuario WHERE ([idusuario] = @idusuario)" UpdateCommand="UPDATE [usuarios] SET [contraseña] = @contraseña, [activo] = @activo, [identidad] = @identidad, [idtipousuario] = @idtipousuario WHERE [idusuario] = @idusuario">
         <DeleteParameters>
             <asp:Parameter Name="idusuario" Type="String" />
@@ -147,5 +146,4 @@
     </asp:SqlDataSource>
 
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ventas.My.MySettings.Conect %>" SelectCommand="SELECT usuarios.idusuario, usuarios.contraseña, usuarios.activo, usuarios.identidad, tipousuario.tipousuario FROM usuarios INNER JOIN tipousuario ON usuarios.idtipousuario = tipousuario.idtipousuario"></asp:SqlDataSource>
-
 </asp:Content>
