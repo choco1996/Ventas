@@ -11,10 +11,10 @@
         datos.DataBind()
 
         If datos.Rows.Count > 0 Then
-            txtnombre.Text = datos.Rows(0).Cells(1).Text
-            txtapellido.Text = datos.Rows(0).Cells(2).Text
-            txtdireccion.Text = datos.Rows(0).Cells(3).Text
-            txttelefono.Text = datos.Rows(0).Cells(4).Text
+            txtnombre.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(1).Text)
+            txtapellido.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(2).Text)
+            txtdireccion.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(3).Text)
+            txttelefono.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(4).Text)
         End If
     End Sub
 

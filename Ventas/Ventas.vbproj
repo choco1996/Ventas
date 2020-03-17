@@ -171,6 +171,7 @@
     <Content Include="PagM\Usuariosbus.aspx" />
     <Content Include="PagM\Usuarioselim.aspx" />
     <Content Include="PagM\Usuariosmod.aspx" />
+    <Content Include="PagM\VentasContado.aspx" />
     <Content Include="PagVent\Menu.aspx" />
     <Content Include="PagVent\MenuClientes.aspx" />
     <Content Include="PagVent\MenuVentas.aspx" />
@@ -517,6 +518,13 @@
     </Compile>
     <Compile Include="PagM\Usuariosmod.aspx.vb">
       <DependentUpon>Usuariosmod.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\VentasContado.aspx.designer.vb">
+      <DependentUpon>VentasContado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\VentasContado.aspx.vb">
+      <DependentUpon>VentasContado.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagVent\Menu.aspx.designer.vb">

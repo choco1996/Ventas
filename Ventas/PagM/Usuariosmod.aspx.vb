@@ -12,7 +12,7 @@
         Dim rb1, rb2 As New Int32
 
         If datos.Rows.Count > 0 Then
-            txtidentidad.Text = datos.Rows(0).Cells(3).Text
+            txtidentidad.Text = Page.Server.HtmlDecode(datos.Rows(0).Cells(3).Text)
             rb1 = datos.Rows(0).Cells(2).Text
             rb2 = datos.Rows(0).Cells(4).Text
         End If
