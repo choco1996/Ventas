@@ -9,7 +9,7 @@
     </div>
     <br />
     <div class="row justify-content-center align-items-center">
-        <!--Inicio de las Cartas-->
+        <!--Inicio de las Cartas-->   
         <div class="card-deck">
             <div class="card" style="max-width: 20rem;">
                 <div class="card-header">Menu</div>
