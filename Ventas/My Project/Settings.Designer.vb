@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OVIL7IO\SQLEXPRESS;Initial Catalog=Ventas;Integrated Security"& _ 
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-NDR2NNF\SQLEXPRESS;Initial Catalog=Ventas;Integrated Security"& _ 
             "=True")>  _
         Public ReadOnly Property Conect() As String
             Get

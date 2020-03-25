@@ -34,7 +34,7 @@
             <div class="col-md-6 align-items-md-center">
                 <div class="form-group">
                     <label>ID del Producto</label>
-                    <asp:TextBox ID="txtidproducto" runat="server" CssClass="form-control" />
+                    <asp:TextBox ID="txtidproducto" runat="server" CssClass="form-control" Enabled="false" />
                 </div>
                 <div class="form-group">
                     <label>Nombre del Producto</label>

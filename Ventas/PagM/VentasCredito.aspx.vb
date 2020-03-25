@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class VentasContado
+Public Class VentasCredito
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -10,12 +10,12 @@ Public Class VentasContado
         Dim con As New SqlConnection
         Dim dr As SqlDataReader
         con.ConnectionString = ConfigurationManager.ConnectionStrings("Ventas.My.MySettings.Conect").ConnectionString
-        Dim consult As String = "SELECT TOP 1 * FROM ventas_contado ORDER BY idventa DESC"
+        Dim consult As String = "SELECT TOP 1 * FROM ventas_credito ORDER BY idventacredito DESC"
         Dim cmd As New SqlCommand(consult, con)
         con.Open()
         dr = cmd.ExecuteReader
         If dr.Read() Then
-            cd = dr("idventa")
+            cd = dr("idventacredito")
         End If
         dr.Close()
         con.Close()
@@ -42,7 +42,7 @@ Public Class VentasContado
         Return dt
     End Function
 
-    Private Sub agregar_Click(sender As Object, e As EventArgs) Handles agregar.Click
+    Protected Sub agregar_Click(sender As Object, e As EventArgs) Handles agregar.Click
         Dim a As Int32
         Dim n As String
         Dim con As New SqlConnection
@@ -59,6 +59,7 @@ Public Class VentasContado
         End If
         dr.Close()
         con.Close()
+
         'columnas
         If (Session("datos") Is Nothing) Then
             Dim sum As Int32
@@ -99,15 +100,15 @@ Public Class VentasContado
         End If
 
     End Sub
-
     Private Sub insert()
         Dim con As New SqlConnection
         Dim dr As SqlDataReader
         con.ConnectionString = ConfigurationManager.ConnectionStrings("Ventas.My.MySettings.Conect").ConnectionString
-        Dim consult As String = "INSERT INTO ventas_contado (idusuario, fecha) VALUES (@id,@fecha)"
+        Dim consult As String = "INSERT INTO ventas_credito (idusuario,idclientes,fecha) VALUES (@id,@cliente,@fecha)"
         Dim cmd As New SqlCommand(consult, con)
         cmd.Parameters.AddWithValue("@id", CStr(txtusuario.Text))
         cmd.Parameters.AddWithValue("@fecha", CDate(txtfecha.Text))
+        cmd.Parameters.AddWithValue("@cliente", CStr(txtidentidad.Text))
         con.Open()
         cmd.ExecuteNonQuery()
         con.Close()
@@ -122,10 +123,10 @@ Public Class VentasContado
         For Each row In dt.Rows
             Dim i As Int16
             i = i + 1
-            Dim consult As String = "INSERT INTO ventas_contadodetalle  (num_detalle, idventa, idproducto, cantidad, precio)VALUES (@num,@idventa,@idproducto,@cantidad,@precio)"
+            Dim consult As String = "INSERT INTO ventas_creditodetalle  (num_detalle, idventacredito, idproducto, cantidad, precio)VALUES (@num,@idventacredito,@idproducto,@cantidad,@precio)"
             Dim cmd As New SqlCommand(consult, con)
             cmd.Parameters.AddWithValue("@num", CInt(i))
-            cmd.Parameters.AddWithValue("@idventa", CInt(txtcodigo.Text))
+            cmd.Parameters.AddWithValue("@idventacredito", CInt(txtcodigo.Text))
             cmd.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
             cmd.Parameters.AddWithValue("@cantidad", CInt(row("Cantidad")))
             cmd.Parameters.AddWithValue("@precio", CDbl(row("Precio")))
@@ -162,15 +163,15 @@ Public Class VentasContado
             cmd1.ExecuteNonQuery()
             con.Close()
             pro = 0
-            cd=0
+            cd = 0
         Next
     End Sub
 
-    Private Sub delt_Click(sender As Object, e As EventArgs) Handles delt.Click
+    Protected Sub delt_Click(sender As Object, e As EventArgs) Handles delt.Click
         Session.Remove("datos")
     End Sub
 
-    Private Sub btnCompra_Click(sender As Object, e As EventArgs) Handles btnCompra.Click
+    Protected Sub btnCompra_Click(sender As Object, e As EventArgs) Handles btnCompra.Click
         Try
             insert()
             insert1()
@@ -180,8 +181,23 @@ Public Class VentasContado
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
         End Try
         Session.Remove("datos")
-
-
     End Sub
 
+    Protected Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
+        Dim con As New SqlConnection
+        Dim dr As SqlDataReader
+        con.ConnectionString = ConfigurationManager.ConnectionStrings("Ventas.My.MySettings.Conect").ConnectionString
+        Dim consult As String = "SELECT nombre,apellido FROM clientes WHERE idclientes = @id"
+        Dim cmd As New SqlCommand(consult, con)
+        cmd.Parameters.AddWithValue("@id", CStr(txtidentidad.Text))
+        con.Open()
+        dr = cmd.ExecuteReader
+        If dr.Read() Then
+            label1.Text = dr("nombre") + " " + dr("apellido")
+        Else
+            label1.Text = "Este cliente no existe, por favor agreguelo"
+        End If
+        dr.Close()
+        con.Close()
+    End Sub
 End Class

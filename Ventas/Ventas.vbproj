@@ -166,12 +166,14 @@
     <Content Include="PagM\MenuEmpleados.aspx" />
     <Content Include="PagM\MenuProductos.aspx" />
     <Content Include="PagM\MenuUsuarios.aspx" />
+    <Content Include="PagM\MenuVentas.aspx" />
     <Content Include="PagM\ProductoElim.aspx" />
     <Content Include="PagM\ProductoMod.aspx" />
     <Content Include="PagM\Usuariosbus.aspx" />
     <Content Include="PagM\Usuarioselim.aspx" />
     <Content Include="PagM\Usuariosmod.aspx" />
     <Content Include="PagM\VentasContado.aspx" />
+    <Content Include="PagM\VentasCredito.aspx" />
     <Content Include="PagVent\Menu.aspx" />
     <Content Include="PagVent\MenuClientes.aspx" />
     <Content Include="PagVent\MenuVentas.aspx" />
@@ -457,6 +459,13 @@
       <DependentUpon>MenuUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="PagM\MenuVentas.aspx.designer.vb">
+      <DependentUpon>MenuVentas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\MenuVentas.aspx.vb">
+      <DependentUpon>MenuVentas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="PagM\PagM.Master.designer.vb">
       <DependentUpon>PagM.Master</DependentUpon>
     </Compile>
@@ -525,6 +534,13 @@
     </Compile>
     <Compile Include="PagM\VentasContado.aspx.vb">
       <DependentUpon>VentasContado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\VentasCredito.aspx.designer.vb">
+      <DependentUpon>VentasCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\VentasCredito.aspx.vb">
+      <DependentUpon>VentasCredito.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagVent\Menu.aspx.designer.vb">

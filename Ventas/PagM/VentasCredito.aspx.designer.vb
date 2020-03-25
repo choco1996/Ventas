@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class VentasContado
+Partial Public Class VentasCredito
 
     '''<summary>
     '''Control txtcodigo.
@@ -39,6 +39,24 @@ Partial Public Class VentasContado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtfecha As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtidentidad.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtidentidad As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control label1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control txtcodprod.
@@ -102,13 +120,4 @@ Partial Public Class VentasContado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txttotal As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control SqlDataSource1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class

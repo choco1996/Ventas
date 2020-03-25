@@ -1,10 +1,15 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="VentasContado.aspx.vb" Inherits="Ventas.VentasContado" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/PagM/PagM.Master" CodeBehind="VentasCredito.aspx.vb" Inherits="Ventas.VentasCredito" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Ventas</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%=txtidentidad.ClientID%>').inputmask("9999-9999-99999");
+        });
+    </script>
+    <script>
         function alertme() {
             Swal.fire({
                 icon: 'success',
@@ -27,21 +32,36 @@
             <div class="col-md-4">
                 <div class="form-group row">
                     <label class="col-3">Codigo</label>
-                    <asp:TextBox ID="txtcodigo" runat="server" CssClass="form-control text-center col-6" Enabled="false" />
+                    <asp:TextBox ID="txtcodigo" runat="server" CssClass="form-control text-center col-4" Enabled="false" />
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="form-group row">
                     <label class="col-3">Usuario</label>
-                    <asp:TextBox ID="txtusuario" runat="server" CssClass="form-control text-center col-6" Enabled="false" />
+                    <asp:TextBox ID="txtusuario" runat="server" CssClass="form-control text-center col-4" Enabled="false" />
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="form-group row">
                     <label class="col-3">Fecha</label>
-                    <asp:TextBox ID="txtfecha" runat="server" CssClass="form-control text-center col-6" Enabled="false" />
+                    <asp:TextBox ID="txtfecha" runat="server" CssClass="form-control text-center col-8" Enabled="false" />
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div class="form-group row">
+                    <label class="col-5">Identidad del Cliente</label>
+                    <asp:TextBox ID="txtidentidad" runat="server" AutoPostBack="true" ontextchanged="TextBox1_TextChanged" CssClass="form-control text-center col-5" />
+                </div>
+            </div>
+            <div class="col-md-5">
+                <asp:Label ID="label1" runat="server" CssClass="navbar-brand text-body text-info"></asp:Label>
+            </div>
+            <div class="col-md-1"></div>
         </div>
         <div class="row">
             <div class="col-md-2"></div>
@@ -71,7 +91,6 @@
         <div class="col-md-1"></div>
         <div class="col-md-3">
             <asp:Button ID="btnCompra" Text="Comprar" runat="server" CssClass="btn btn-lg btn-success" />
-
         </div>
         <div class="col-md-4"></div>
         <div class="col-md-4">
@@ -81,5 +100,4 @@
             </div>
         </div>
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" />
 </asp:Content>

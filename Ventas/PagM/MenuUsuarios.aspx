@@ -3,7 +3,7 @@
     <title>Menu Usuarios</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-              <div class="container jumbotron justify-content-center">
+              <div class="container-fluid jumbotron justify-content-center">
     <h1 class="display-4 text-center">Usuarios</h1>
     </div>
   <!-- <h2 class="display-5 text-center">Menu Principal</h2> -->

@@ -4,11 +4,6 @@
     <title>Eliminacion Usuarios</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#<%=txteliminacion.ClientID%>').inputmask("9999-9999-99999");
-        });
-    </script>
     <script>
             function alertme() {
                 Swal.fire({

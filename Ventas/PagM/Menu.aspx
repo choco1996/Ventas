@@ -9,7 +9,7 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" src="../Imagenes/Empleados/E1.jpg">
                 <div class="carousel-caption align-content-sm-center">
-                    <h1 class="text-primary display-4">Maxi Despensa Variedad y ahorro en grande</h1>
+                    <h1 class="text-primary display-4"></h1>
                 </div>
             </div>
             <div class="carousel-item">
@@ -89,6 +89,20 @@
                     <p class="card-text">Submenu para interactuar con los datos de las Categorias de los Productos</p>
                 </div>
                 <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuCategoria.aspx" role="button">Entrar</a></div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center align-items-center">
+        <!-- Inicio de las Cartas-->
+        <div class="card-deck">
+            <div class="card" style="max-width: 20rem;">
+                <div class="card-header">Menu</div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ventas</h5>
+                    <p class="card-text">Submenu para interactuar con los datos del Proveedor</p>
+                </div>
+                <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuVentas.aspx" role="button">Entrar</a></div>
             </div>
         </div>
     </div>
