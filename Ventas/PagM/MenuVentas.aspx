@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid jumbotron justify-content-center">
-        <h1 class="display-4 text-center">Usuarios</h1>
+        <h1 class="display-4 text-center">Ventas</h1>
     </div>
     <br />
     <div class="row justify-content-center align-items-center">

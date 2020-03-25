@@ -26,7 +26,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="MenuClientes.aspx">Clientes</a>
-                            <a class="dropdown-item" href="">Ventas</a>
+                            <a class="dropdown-item" href="MenuVentas.aspx">Ventas</a>
                         </div>
                     </li>
                 </ul>
@@ -34,6 +34,7 @@
                     <a class="navbar-brand" href="Menu.aspx">Maxi Despensa</a>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
+                    <label class="navbar-brand">Usuario</label><asp:Label ID="label1" runat="server" CssClass="navbar-brand text-body text-info"></asp:Label>
                     <a class="btn btn-warning my-2 my-sm-0" href="../Login.aspx">Cerrar Sesion</a>
                 </form>
             </div>

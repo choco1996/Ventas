@@ -174,9 +174,13 @@
     <Content Include="PagM\Usuariosmod.aspx" />
     <Content Include="PagM\VentasContado.aspx" />
     <Content Include="PagM\VentasCredito.aspx" />
+    <Content Include="PagVent\Clientesbus.aspx" />
+    <Content Include="PagVent\Clientesin.aspx" />
     <Content Include="PagVent\Menu.aspx" />
     <Content Include="PagVent\MenuClientes.aspx" />
     <Content Include="PagVent\MenuVentas.aspx" />
+    <Content Include="PagVent\VentasContado.aspx" />
+    <Content Include="PagVent\VentasCredito.aspx" />
     <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
     <Content Include="Scripts\inputmask\inputmask.js" />
     <Content Include="Scripts\inputmask\inputmask.min.js" />
@@ -543,6 +547,20 @@
       <DependentUpon>VentasCredito.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="PagVent\Clientesbus.aspx.designer.vb">
+      <DependentUpon>Clientesbus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagVent\Clientesbus.aspx.vb">
+      <DependentUpon>Clientesbus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagVent\Clientesin.aspx.designer.vb">
+      <DependentUpon>Clientesin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagVent\Clientesin.aspx.vb">
+      <DependentUpon>Clientesin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="PagVent\Menu.aspx.designer.vb">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
@@ -577,6 +595,20 @@
     <Compile Include="PagVent\PagVent.Master.vb">
       <DependentUpon>PagVent.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagVent\VentasContado.aspx.designer.vb">
+      <DependentUpon>VentasContado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagVent\VentasContado.aspx.vb">
+      <DependentUpon>VentasContado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagVent\VentasCredito.aspx.designer.vb">
+      <DependentUpon>VentasCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagVent\VentasCredito.aspx.vb">
+      <DependentUpon>VentasCredito.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagVisor\PagVisor.Master.designer.vb">
       <DependentUpon>PagVisor.Master</DependentUpon>

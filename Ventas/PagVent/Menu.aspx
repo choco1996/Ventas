@@ -47,8 +47,8 @@
             <div class="card" style="max-width: 20rem;">
                 <div class="card-header">Menu</div>
                 <div class="card-body text-center">
-                    <h5 class="card-title">Vacio</h5>
-                    <p class="card-text">Submenu para interactuar con los datos </p>
+                    <h5 class="card-title">Ventas</h5>
+                    <p class="card-text">Submenu para interactuar con los datos del Proveedor</p>
                 </div>
                 <div class="card-footer text-center"><a class="btn btn-outline-info" href="MenuVentas.aspx" role="button">Entrar</a></div>
             </div>

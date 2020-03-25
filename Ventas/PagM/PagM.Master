@@ -29,6 +29,7 @@
                             <a class="dropdown-item" href="MenuClientes.aspx">Clientes</a>
                             <a class="dropdown-item" href="MenuProductos.aspx">Producto</a>
                             <a class="dropdown-item" href="MenuCategoria.aspx">Categoria</a>
+                            <a class="dropdown-item" href="MenuVentas.aspx">Ventas</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="MenuUsuarios.aspx">Usuarios</a>
                         </div>

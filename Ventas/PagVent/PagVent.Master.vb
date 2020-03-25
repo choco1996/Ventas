@@ -9,6 +9,7 @@
                 Response.Redirect("/Login.aspx")
             End If
         End If
+        label1.Text = Request.Cookies("Log").Value
     End Sub
 
 End Class
