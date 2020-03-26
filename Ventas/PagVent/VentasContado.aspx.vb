@@ -113,55 +113,51 @@ Public Class VentasContado1
 
     End Sub
     Private Sub insert1()
-        Dim dt As DataTable = Session("datos")
-        Dim row As DataRow = dt.NewRow()
         Dim con As New SqlConnection
         Dim dr As SqlDataReader
         con.ConnectionString = ConfigurationManager.ConnectionStrings("Ventas.My.MySettings.Conect").ConnectionString
-        For Each row In dt.Rows
-            Dim i As Int16
-            i = i + 1
-            Dim consult As String = "INSERT INTO ventas_contadodetalle  (num_detalle, idventa, idproducto, cantidad, precio)VALUES (@num,@idventa,@idproducto,@cantidad,@precio)"
-            Dim cmd As New SqlCommand(consult, con)
-            cmd.Parameters.AddWithValue("@num", CInt(i))
-            cmd.Parameters.AddWithValue("@idventa", CInt(txtcodigo.Text))
-            cmd.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
-            cmd.Parameters.AddWithValue("@cantidad", CInt(row("Cantidad")))
-            cmd.Parameters.AddWithValue("@precio", CDbl(row("Precio")))
-            con.Open()
-            cmd.ExecuteNonQuery()
-            con.Close()
-        Next
-    End Sub
-    Private Sub modprod()
-        Dim cd, pro As Int32
+        Dim cd, pro, insert As Int32
         Dim dt As DataTable = Session("datos")
         Dim row As DataRow = dt.NewRow()
-        Dim con As New SqlConnection
-        Dim dr As SqlDataReader
-        con.ConnectionString = ConfigurationManager.ConnectionStrings("Ventas.My.MySettings.Conect").ConnectionString
-
         For Each row In dt.Rows
-            Dim consult As String = "SELECT inventario FROM producto WHERE idproducto = @idproducto"
-            Dim cmd As New SqlCommand(consult, con)
-            cmd.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
+            Dim consult1 As String = "SELECT inventario FROM producto WHERE idproducto = @idproducto"
+            Dim cmd1 As New SqlCommand(consult1, con)
+            cmd1.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
             con.Open()
-            dr = cmd.ExecuteReader
+            dr = cmd1.ExecuteReader
             If dr.Read() Then
                 cd = dr("inventario")
             End If
             dr.Close()
             con.Close()
             pro = (cd - row("Cantidad"))
-            Dim consult1 As String = "UPDATE producto SET inventario = @inventario WHERE  idproducto = @idproducto"
-            Dim cmd1 As New SqlCommand(consult1, con)
-            cmd1.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
-            cmd1.Parameters.AddWithValue("@inventario", CInt(pro))
+            If pro < 0 Then
+                pro = 0
+                insert = row("Cantidad")
+            End If
+            Dim consult2 As String = "UPDATE producto SET inventario = @inventario WHERE  idproducto = @idproducto"
+            Dim cmd2 As New SqlCommand(consult2, con)
+            cmd2.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
+            cmd2.Parameters.AddWithValue("@inventario", CInt(pro))
             con.Open()
-            cmd1.ExecuteNonQuery()
+            cmd2.ExecuteNonQuery()
             con.Close()
             pro = 0
             cd = 0
+            insert = 0
+
+            Dim i As Int16
+            i = i + 1
+            Dim consult As String = "INSERT INTO ventas_creditodetalle  (num_detalle, idventacredito, idproducto, cantidad, precio)VALUES (@num,@idventacredito,@idproducto,@cantidad,@precio)"
+            Dim cmd As New SqlCommand(consult, con)
+            cmd.Parameters.AddWithValue("@num", CInt(i))
+            cmd.Parameters.AddWithValue("@idventacredito", CInt(txtcodigo.Text))
+            cmd.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
+            cmd.Parameters.AddWithValue("@cantidad", CInt(row("Cantidad")))
+            cmd.Parameters.AddWithValue("@precio", CDbl(insert))
+            con.Open()
+            cmd.ExecuteNonQuery()
+            con.Close()
         Next
     End Sub
 
@@ -173,7 +169,7 @@ Public Class VentasContado1
         Try
             insert()
             insert1()
-            modprod()
+
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)
