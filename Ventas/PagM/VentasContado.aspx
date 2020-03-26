@@ -18,8 +18,7 @@
                 title: 'Oops...',
                 text: 'No se pudo modificar el registro',
             })
-        }
-    </script>
+     </script>
     <br />
     <div class="container">
         <div class="row">
