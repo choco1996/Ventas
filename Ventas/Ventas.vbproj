@@ -162,6 +162,8 @@
     <Content Include="PagM\Empleadoselim.aspx" />
     <Content Include="PagM\Empleadosin.aspx" />
     <Content Include="PagM\Empleadosmod.aspx" />
+    <Content Include="PagM\FacturaContado.aspx" />
+    <Content Include="PagM\FacturaCredito.aspx" />
     <Content Include="PagM\MenuCategoria.aspx" />
     <Content Include="PagM\MenuEmpleados.aspx" />
     <Content Include="PagM\MenuProductos.aspx" />
@@ -412,6 +414,20 @@
     </Compile>
     <Compile Include="PagM\Empleadosmod.aspx.vb">
       <DependentUpon>Empleadosmod.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\FacturaContado.aspx.designer.vb">
+      <DependentUpon>FacturaContado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\FacturaContado.aspx.vb">
+      <DependentUpon>FacturaContado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PagM\FacturaCredito.aspx.designer.vb">
+      <DependentUpon>FacturaCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagM\FacturaCredito.aspx.vb">
+      <DependentUpon>FacturaCredito.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="PagM\MenuCategoria.aspx.designer.vb">

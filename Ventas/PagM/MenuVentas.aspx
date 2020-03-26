@@ -9,7 +9,7 @@
     </div>
     <br />
     <div class="row justify-content-center align-items-center">
-        <!--Inicio de las Cartas-->   
+        <!--Inicio de las Cartas-->
         <div class="card-deck">
             <div class="card" style="max-width: 20rem;">
                 <div class="card-header">Menu</div>
@@ -26,6 +26,22 @@
                     <p class="card-text">Submenu para realizar Ventas al credito</p>
                 </div>
                 <div class="card-footer text-center"><a class="btn btn-outline-info" href="VentasCredito.aspx" role="button">Entrar</a></div>
+            </div>
+            <div class="card" style="max-width: 20rem;">
+                <div class="card-header">Menu</div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ventas al credito - Facturas</h5>
+                    <p class="card-text">Submenu para ver las Ventas al credito</p>
+                </div>
+                <div class="card-footer text-center"><a class="btn btn-outline-info" href="FacturaCredito.aspx" role="button">Entrar</a></div>
+            </div>
+            <div class="card" style="max-width: 20rem;">
+                <div class="card-header">Menu</div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ventas al contado - Facturas</h5>
+                    <p class="card-text">Submenu para ver las Ventas al contado</p>
+                </div>
+                <div class="card-footer text-center"><a class="btn btn-outline-info" href="FacturaContado.aspx" role="button">Entrar</a></div>
             </div>
         </div>
     </div>

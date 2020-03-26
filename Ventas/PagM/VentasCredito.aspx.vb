@@ -119,8 +119,10 @@ Public Class VentasCredito
         Dim dr As SqlDataReader
         con.ConnectionString = ConfigurationManager.ConnectionStrings("Ventas.My.MySettings.Conect").ConnectionString
         Dim cd, pro, insert As Int32
+        Dim i As Int16
         Dim dt As DataTable = Session("datos")
         Dim row As DataRow = dt.NewRow()
+
         For Each row In dt.Rows
             Dim consult1 As String = "SELECT inventario FROM producto WHERE idproducto = @idproducto"
             Dim cmd1 As New SqlCommand(consult1, con)
@@ -135,7 +137,6 @@ Public Class VentasCredito
             pro = (cd - row("Cantidad"))
             If pro < 0 Then
                 pro = 0
-                insert = row("Cantidad")
             End If
             Dim consult2 As String = "UPDATE producto SET inventario = @inventario WHERE  idproducto = @idproducto"
             Dim cmd2 As New SqlCommand(consult2, con)
@@ -144,26 +145,48 @@ Public Class VentasCredito
             con.Open()
             cmd2.ExecuteNonQuery()
             con.Close()
+        Next
+
+    End Sub
+    Private Sub insert2()
+        Dim con As New SqlConnection
+        Dim dr As SqlDataReader
+        con.ConnectionString = ConfigurationManager.ConnectionStrings("Ventas.My.MySettings.Conect").ConnectionString
+        Dim cd, pro, insert As Int32
+        Dim i As Int16
+        Dim dt As DataTable = Session("datos")
+        Dim row As DataRow = dt.NewRow()
+        For Each row In dt.Rows
+            Dim consult As String = "SELECT inventario FROM producto WHERE idproducto = @idproducto"
+            Dim cmd As New SqlCommand(consult, con)
+            cmd.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
+            con.Open()
+            dr = cmd.ExecuteReader
+            If dr.Read() Then
+                cd = dr("inventario")
+            End If
+            dr.Close()
+            con.Close()
+            pro = (cd - row("Cantidad"))
+            If pro < 0 Then
+                pro = row("Cantidad")
+            End If
+            i = i + 1
+            Dim consult1 As String = "INSERT INTO ventas_creditodetalle  (num_detalle, idventacredito, idproducto, cantidad, precio)VALUES (@num,@idventacredito,@idproducto,@cantidad,@precio)"
+            Dim cmd1 As New SqlCommand(consult1, con)
+            cmd1.Parameters.AddWithValue("@num", CInt(i))
+            cmd1.Parameters.AddWithValue("@idventacredito", CInt(txtcodigo.Text))
+            cmd1.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
+            cmd1.Parameters.AddWithValue("@cantidad", pro)
+            cmd1.Parameters.AddWithValue("@precio", CDbl(row("Precio")))
+            con.Open()
+            cmd1.ExecuteNonQuery()
+            con.Close()
             pro = 0
             cd = 0
             insert = 0
-
-            Dim i As Int16
-            i = i + 1
-            Dim consult As String = "INSERT INTO ventas_creditodetalle  (num_detalle, idventacredito, idproducto, cantidad, precio)VALUES (@num,@idventacredito,@idproducto,@cantidad,@precio)"
-            Dim cmd As New SqlCommand(consult, con)
-            cmd.Parameters.AddWithValue("@num", CInt(i))
-            cmd.Parameters.AddWithValue("@idventacredito", CInt(txtcodigo.Text))
-            cmd.Parameters.AddWithValue("@idproducto", CInt(row("Codigo Producto")))
-            cmd.Parameters.AddWithValue("@cantidad", CInt(row("Cantidad")))
-            cmd.Parameters.AddWithValue("@precio", CDbl(insert))
-            con.Open()
-            cmd.ExecuteNonQuery()
-            con.Close()
         Next
     End Sub
-
-
     Protected Sub delt_Click(sender As Object, e As EventArgs) Handles delt.Click
         Session.Remove("datos")
     End Sub
@@ -172,6 +195,8 @@ Public Class VentasCredito
         Try
             insert()
             insert1()
+            insert2()
+
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "errorme()", True)

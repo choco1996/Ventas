@@ -3,21 +3,21 @@
     <title>Ventas</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-           <script>
-        function alertme() {
-            Swal.fire({
-                icon: 'success',
-                title: 'Accion ejecutada corretamente',
+  <script>
+      function alertme() {
+          Swal.fire({
+              icon: 'success',
+              title: 'Accion ejecutada corretamente',
 
-            })
-        }
-        function errorme() {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'No se pudo modificar el registro',
-            })
-        }
+          })
+      }
+      function errorme() {
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'No se pudo agregar el registro',
+          })
+      }
     </script>
     <br />
     <div class="container">
@@ -80,4 +80,5 @@
             </div>
         </div>
     </div>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" />
 </asp:Content>

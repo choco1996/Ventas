@@ -21,7 +21,7 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'No se pudo modificar el registro',
+                text: 'No se pudo agregar el registro',
             })
         }
     </script>

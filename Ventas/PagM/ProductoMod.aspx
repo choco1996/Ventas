@@ -141,8 +141,8 @@
             <asp:ControlParameter ControlID="txtprecio" Name="precio" PropertyName="Text" Type="Double" />
             <asp:ControlParameter ControlID="RadioButtonList3" Name="activo" PropertyName="SelectedValue" Type="Byte" />
             <asp:ControlParameter ControlID="txtinventario" Name="inventario" PropertyName="Text" Type="Int32" />
-            <asp:ControlParameter ControlID="txtbusqueda" Name="idcategoria" PropertyName="Text" Type="Int32" />
-            <asp:ControlParameter ControlID="DropDownList1" Name="idproducto" PropertyName="SelectedValue" Type="Int32" />
+            <asp:ControlParameter ControlID="txtbusqueda" Name="idproducto" PropertyName="Text" Type="Int32" />
+            <asp:ControlParameter ControlID="DropDownList1" Name="idcategoria" PropertyName="SelectedValue" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>
 

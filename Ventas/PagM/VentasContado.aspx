@@ -4,7 +4,7 @@
     <title>Ventas</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <script>
+    <script>
         function alertme() {
             Swal.fire({
                 icon: 'success',
@@ -16,9 +16,10 @@
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'No se pudo modificar el registro',
+                text: 'No se pudo agregar el registro',
             })
-     </script>
+        }
+    </script>
     <br />
     <div class="container">
         <div class="row">
