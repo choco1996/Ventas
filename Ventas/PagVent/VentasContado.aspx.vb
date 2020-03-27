@@ -168,7 +168,7 @@ Public Class VentasContado1
             con.Close()
             pro = (cd - row("Cantidad"))
             If pro <= 0 Then
-                pro = row("Cantidad")
+                pro = cd
             End If
             i = i + 1
             Dim consult1 As String = "INSERT INTO ventas_contadodetalle (num_detalle, idventa, idproducto, cantidad, precio)VALUES (@num,@idventa,@idproducto,@cantidad,@precio)"

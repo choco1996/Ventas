@@ -167,9 +167,8 @@ Public Class VentasCredito1
             End If
             dr.Close()
             con.Close()
-            pro = (cd - row("Cantidad"))
             If pro <= 0 Then
-                pro = row("Cantidad")
+                pro = cd
             End If
             i = i + 1
             Dim consult1 As String = "INSERT INTO ventas_creditodetalle  (num_detalle, idventacredito, idproducto, cantidad, precio)VALUES (@num,@idventacredito,@idproducto,@cantidad,@precio)"
@@ -184,7 +183,6 @@ Public Class VentasCredito1
             con.Close()
             pro = 0
             cd = 0
-            insert = 0
         Next
     End Sub
     Protected Sub delt_Click(sender As Object, e As EventArgs) Handles delt.Click
