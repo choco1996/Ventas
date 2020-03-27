@@ -135,7 +135,7 @@ Public Class VentasCredito1
             dr.Close()
             con.Close()
             pro = (cd - row("Cantidad"))
-            If pro < 0 Then
+            If pro <= 0 Then
                 pro = 0
             End If
             Dim consult2 As String = "UPDATE producto SET inventario = @inventario WHERE  idproducto = @idproducto"
@@ -168,7 +168,7 @@ Public Class VentasCredito1
             dr.Close()
             con.Close()
             pro = (cd - row("Cantidad"))
-            If pro < 0 Then
+            If pro <= 0 Then
                 pro = row("Cantidad")
             End If
             i = i + 1
@@ -194,8 +194,8 @@ Public Class VentasCredito1
     Protected Sub btnCompra_Click(sender As Object, e As EventArgs) Handles btnCompra.Click
         Try
             insert()
-            insert1()
             insert2()
+            insert1()
 
             ClientScript.RegisterStartupScript(Me.GetType, "ramdomtext", "alertme()", True)
         Catch ex As Exception
